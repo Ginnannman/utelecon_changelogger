@@ -53,6 +53,8 @@ function site(v) {
     "en/about/index.html": page({ lang: "en", title: "About", body: "<p>Same text.</p>", footerLink: newer ? "/about/new/" : "/about/", other: "/about/" }),
     "faq/index.html": page({ title: "FAQ", body: `<h2>質問</h2><pre>code line\n${newer ? "new" : "old"}</pre>`, footerLink: newer ? "/about/new/" : "/about/" }),
     "en/faq/index.html": page({ lang: "en", title: "FAQ", body: `<p>${newer ? "Updated" : "Original"}</p>`, footerLink: newer ? "/about/new/" : "/about/" }),
+    "google/index.html": page({ title: "ECCSクラウドメール", body: "<p>不変</p>", footerLink: newer ? "/about/new/" : "/about/" }),
+    "en/google/index.html": page({ lang: "en", title: "ECCS Cloud Email", body: `<p>${newer ? "changed" : "same"}</p>`, footerLink: newer ? "/about/new/" : "/about/" }),
     "notice/rss.xml": `<rss>${v}</rss>`,
     [`_astro/layout.${newer ? "NEWHASH1" : "OLDHASH1"}.css`]: `body{color:${newer ? "red" : "black"}}`,
     "about/doc.pdf": `PDF-${v}`,
@@ -87,7 +89,10 @@ try {
 
   const c = JSON.parse(await readFile(path.join(out, "changes.json"), "utf8"));
   const keys = c.pages.map((p) => p.key);
-  assert.deepEqual(keys, ["/about/", "/faq/", "/new/", "/old/"], "個別ページ");
+  assert.deepEqual(keys, ["/about/", "/faq/", "/google/", "/new/", "/old/"], "個別ページ");
+  const g = c.pages.find((p) => p.key === "/google/");
+  assert.equal(g.title, "ECCSクラウドメール", "日本語が変更なしでも表題は日本語を使う");
+  assert.deepEqual([g.ja, g.en], ["unchanged", "modified"]);
   assert.equal(c.pages.find((p) => p.key === "/about/").en, "unchanged", "en/about は本文不変");
   assert.equal(c.pages.find((p) => p.key === "/faq/").en, "modified");
   assert.equal(c.pages.find((p) => p.key === "/new/").ja, "added");

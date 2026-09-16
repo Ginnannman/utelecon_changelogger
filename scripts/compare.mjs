@@ -207,7 +207,9 @@ const individualRows = [];
 for (const key of [...individual.keys()].sort()) {
   const pj = jaPath(key);
   const pe = enPath(key);
-  const title = pageResult.get(pj)?.title ?? pageResult.get(pe)?.title ?? (displayTitle(A.pages[pj]?.title ?? A.pages[pe]?.title) || key);
+  // 表題は日本語ページを優先する（日本語側が変更なしでも、存在すればその表題を使う）
+  const titleSrc = B.pages[pj] ?? A.pages[pj] ?? B.pages[pe] ?? A.pages[pe];
+  const title = displayTitle(titleSrc?.title) || key;
   const ja = langCell(pj);
   const en = langCell(pe);
   const file = `pages/${slug(key)}.md`;
@@ -267,7 +269,7 @@ if (same) {
 } else {
   R.push(
     `個別ページ ${individualRows.length} 件、複数ページに共通する本文の変更 ${sharedContent.length} 件、` +
-      `共通部分の変更 ${chromeGroups.length} 件、スタイル・スクリプト ${assetAdded.length + assetRemoved.length} 件、` +
+      `共通部分の変更 ${chromeGroups.length} 件、ビルド生成ファイル ${assetAdded.length + assetRemoved.length} 件、` +
       `配布ファイル・静的ファイル ${fileRows.length} 件、リダイレクト ${redirectRows.length} 件。`,
     "",
   );
@@ -294,9 +296,9 @@ if (same) {
     chromeGroups.forEach((g, i) => R.push(`| [#${i + 1}](${chromeFiles[i]}) | ${g.paths.length} | \`${g.paths[0]}\` |`));
   } else R.push("なし");
   R.push("");
-  R.push(`### スタイル・スクリプト（\`/_astro/\`）`, "");
+  R.push(`### ビルド生成ファイル（\`/_astro/\`）`, "");
   if (assetAdded.length || assetRemoved.length) {
-    R.push("ファイル名にハッシュが含まれるため、名前の増減が内容の変更を表します。", "");
+    R.push("CSS・JavaScript と、ビルド時に変換された画像です。ファイル名にハッシュが含まれるため、名前の増減が内容や変換条件の変更を表します。", "");
     R.push("<details>", `<summary>追加 ${assetAdded.length}／削除 ${assetRemoved.length}</summary>`, "");
     for (const x of assetAdded) R.push(`- 追加 \`${x}\``);
     for (const x of assetRemoved) R.push(`- 削除 \`${x}\``);
