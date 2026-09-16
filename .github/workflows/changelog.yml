@@ -1,0 +1,209 @@
+name: utelecon changelog
+
+on:
+  # 毎週月曜 03:00 JST（UTC で日曜 18:00）。前回の終了時点から今回の実行時点までを比較する
+  schedule:
+    - cron: "0 18 * * 0"
+  # Actions タブの「Run workflow」から2時点を指定して実行する
+  workflow_dispatch:
+    inputs:
+      since:
+        description: "開始（JST, YYYY-MM-DD HH:MM）"
+        required: true
+        type: string
+      until:
+        description: "終了（JST, YYYY-MM-DD HH:MM）。空欄なら実行時点"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+# 状態ファイルと報告の書き込みが重ならないようにする
+concurrency:
+  group: changelog
+  cancel-in-progress: false
+
+env:
+  TARGET_REPO: utelecon/utelecon.github.io
+  TARGET_BRANCH: master
+  SNAP_SITE: https://utelecon.adm.u-tokyo.ac.jp
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      kind: ${{ steps.r.outputs.kind }}
+      since: ${{ steps.r.outputs.since }}
+      until: ${{ steps.r.outputs.until }}
+      old_sha: ${{ steps.r.outputs.old_sha }}
+      new_sha: ${{ steps.r.outputs.new_sha }}
+      old_date: ${{ steps.r.outputs.old_date }}
+      new_date: ${{ steps.r.outputs.new_date }}
+      old_node: ${{ steps.r.outputs.old_node }}
+      new_node: ${{ steps.r.outputs.new_node }}
+      same: ${{ steps.r.outputs.same }}
+      dir: ${{ steps.r.outputs.dir }}
+    steps:
+      - uses: actions/checkout@v7
+      - id: r
+        name: Resolve commits
+        env:
+          EVENT: ${{ github.event_name }}
+          IN_SINCE: ${{ inputs.since }}
+          IN_UNTIL: ${{ inputs.until }}
+        run: bash scripts/resolve.sh
+
+  build:
+    needs: resolve
+    if: needs.resolve.outputs.same != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: true
+      matrix:
+        side: [old, new]
+    env:
+      SHA: ${{ matrix.side == 'old' && needs.resolve.outputs.old_sha || needs.resolve.outputs.new_sha }}
+      NODE_MAJOR: ${{ matrix.side == 'old' && needs.resolve.outputs.old_node || needs.resolve.outputs.new_node }}
+      COMMITTED_AT: ${{ matrix.side == 'old' && needs.resolve.outputs.old_date || needs.resolve.outputs.new_date }}
+    steps:
+      - name: Checkout tool
+        uses: actions/checkout@v7
+        with:
+          path: tool
+
+      # 同じコミットのスナップショットは再利用する（前回の比較先 = 今回の比較元）
+      - name: Restore snapshot
+        id: cache
+        uses: actions/cache/restore@v6
+        with:
+          path: snapshot/snap.json.gz
+          key: snapshot-v1-${{ env.SHA }}-${{ hashFiles('tool/scripts/snapshot.mjs', 'tool/scripts/lib/**', 'tool/package-lock.json') }}
+
+      - name: Checkout target
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/checkout@v7
+        with:
+          repository: ${{ env.TARGET_REPO }}
+          ref: ${{ env.SHA }}
+          path: target
+          persist-credentials: false
+
+      - name: Setup Node
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/setup-node@v6
+        with:
+          node-version: ${{ env.NODE_MAJOR }}
+
+      - name: Build target
+        if: steps.cache.outputs.cache-hit != 'true'
+        working-directory: target
+        run: |
+          if npm ci --no-audit --no-fund; then
+            echo "INSTALL=npm ci" >> "$GITHUB_ENV"
+          else
+            echo "::warning::npm ci に失敗したため npm install で再試行します"
+            rm -rf node_modules
+            npm install --no-audit --no-fund
+            echo "INSTALL=npm install（npm ci 失敗）" >> "$GITHUB_ENV"
+          fi
+          npm run build
+
+      - name: Snapshot
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: |
+          (cd tool && npm ci --no-audit --no-fund)
+          SNAP_SHA="$SHA" SNAP_NODE="$(node -v)" SNAP_INSTALL="$INSTALL" SNAP_COMMITTED_AT="$COMMITTED_AT" \
+            node tool/scripts/snapshot.mjs target/dist snapshot/snap.json.gz
+          rm -rf target
+
+      - name: Save snapshot
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v6
+        with:
+          path: snapshot/snap.json.gz
+          key: snapshot-v1-${{ env.SHA }}-${{ hashFiles('tool/scripts/snapshot.mjs', 'tool/scripts/lib/**', 'tool/package-lock.json') }}
+
+      - name: Upload snapshot
+        uses: actions/upload-artifact@v7
+        with:
+          name: snapshot-${{ matrix.side }}
+          path: snapshot/snap.json.gz
+          retention-days: 30
+          if-no-files-found: error
+
+  report:
+    needs: [resolve, build]
+    if: ${{ !cancelled() && needs.resolve.result == 'success' && (needs.build.result == 'success' || needs.build.result == 'skipped') }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      KIND: ${{ needs.resolve.outputs.kind }}
+      SINCE: ${{ needs.resolve.outputs.since }}
+      UNTIL: ${{ needs.resolve.outputs.until }}
+      OLD_SHA: ${{ needs.resolve.outputs.old_sha }}
+      NEW_SHA: ${{ needs.resolve.outputs.new_sha }}
+      OLD_DATE: ${{ needs.resolve.outputs.old_date }}
+      NEW_DATE: ${{ needs.resolve.outputs.new_date }}
+      SAME: ${{ needs.resolve.outputs.same }}
+      DIR: ${{ needs.resolve.outputs.dir }}
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci --no-audit --no-fund
+
+      - name: Download old snapshot
+        if: env.SAME != 'true'
+        uses: actions/download-artifact@v8
+        with:
+          name: snapshot-old
+          path: snapshots/old
+
+      - name: Download new snapshot
+        if: env.SAME != 'true'
+        uses: actions/download-artifact@v8
+        with:
+          name: snapshot-new
+          path: snapshots/new
+
+      - name: Compare
+        run: |
+          args=(--out "$DIR" --kind "$KIND" --since "$SINCE" --until "$UNTIL"
+                --old-sha "$OLD_SHA" --new-sha "$NEW_SHA" --old-date "$OLD_DATE" --new-date "$NEW_DATE"
+                --repo "$TARGET_REPO" --tool-sha "$GITHUB_SHA")
+          if [ "$SAME" != "true" ]; then
+            args+=(--old snapshots/old/snap.json.gz --new snapshots/new/snap.json.gz)
+          fi
+          # 同じ期間を再実行した場合は上書きする
+          rm -rf "$DIR"
+          node scripts/compare.mjs "${args[@]}"
+          node scripts/index.mjs reports
+          cat "$DIR/README.md" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Update state
+        if: env.KIND == 'weekly'
+        run: |
+          mkdir -p state
+          printf '{\n  "until": "%s",\n  "sha": "%s"\n}\n' "$UNTIL" "$NEW_SHA" > state/last.json
+
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add reports state
+          if git diff --cached --quiet; then
+            echo "変更なし"
+            exit 0
+          fi
+          git commit -m "changelog: ${KIND} $(TZ=Asia/Tokyo date -d "$SINCE" '+%F %H:%M') → $(TZ=Asia/Tokyo date -d "$UNTIL" '+%F %H:%M') JST"
+          git pull --rebase --quiet
+          git push
