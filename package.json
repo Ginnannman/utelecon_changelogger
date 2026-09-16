@@ -1,0 +1,17 @@
+{
+  "name": "utelecon-changelog",
+  "private": true,
+  "type": "module",
+  "description": "utelecon ポータルのビルド結果を2時点で比較し、変更ページの一覧と差分を記録する",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "test": "node test/run.mjs"
+  },
+  "dependencies": {
+    "diff": "9.0.0",
+    "hast-util-from-html": "2.0.3",
+    "hast-util-select": "6.0.4"
+  }
+}
