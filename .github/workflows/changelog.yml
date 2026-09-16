@@ -1,10 +1,8 @@
 name: utelecon changelog
 
 on:
-  # 毎週月曜 03:00 JST（UTC で日曜 18:00）。前回の終了時点から今回の実行時点までを比較する
   schedule:
-    - cron: "0 18 * * 0"
-  # Actions タブの「Run workflow」から2時点を指定して実行する（書き込み権限を持つ者のみ実行可能）
+    - cron: "0 18 * * 0" # 毎週月曜 03:00 JST
   workflow_dispatch:
     inputs:
       since:
@@ -16,19 +14,19 @@ on:
         required: false
         type: string
 
-# 既定は読み取りのみ。書き込みは report ジョブだけに与える
 permissions:
   contents: read
 
-# 状態ファイルと報告の書き込みが重ならないようにする
+cache-mode: none
+
 concurrency:
   group: changelog
-  cancel-in-progress: false
+  queue: max
 
 env:
   TARGET_REPO: utelecon/utelecon.github.io
   TARGET_BRANCH: master
-  SNAP_SITE: https://utelecon.adm.u-tokyo.ac.jp
+  PUBLISH_BRANCH: main
 
 jobs:
   resolve:
@@ -36,28 +34,39 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
-      contents: read # 自リポジトリの state/last.json を読む
+      contents: read
     outputs:
-      kind: ${{ steps.r.outputs.kind }}
-      since: ${{ steps.r.outputs.since }}
-      until: ${{ steps.r.outputs.until }}
-      old_sha: ${{ steps.r.outputs.old_sha }}
-      new_sha: ${{ steps.r.outputs.new_sha }}
-      old_date: ${{ steps.r.outputs.old_date }}
-      new_date: ${{ steps.r.outputs.new_date }}
-      old_node: ${{ steps.r.outputs.old_node }}
-      new_node: ${{ steps.r.outputs.new_node }}
-      same: ${{ steps.r.outputs.same }}
-      dir: ${{ steps.r.outputs.dir }}
+      tool_sha: ${{ steps.tool.outputs.sha }}
+      kind: ${{ steps.resolve.outputs.kind }}
+      since: ${{ steps.resolve.outputs.since }}
+      until: ${{ steps.resolve.outputs.until }}
+      old_sha: ${{ steps.resolve.outputs.old_sha }}
+      new_sha: ${{ steps.resolve.outputs.new_sha }}
+      old_date: ${{ steps.resolve.outputs.old_date }}
+      new_date: ${{ steps.resolve.outputs.new_date }}
+      old_node: ${{ steps.resolve.outputs.old_node }}
+      new_node: ${{ steps.resolve.outputs.new_node }}
+      state_sha: ${{ steps.resolve.outputs.state_sha }}
+      same: ${{ steps.resolve.outputs.same }}
+      dir: ${{ steps.resolve.outputs.dir }}
     steps:
+      - name: Require the default branch
+        if: github.ref != 'refs/heads/main'
+        run: |
+          echo "::error::main 以外のブランチからは実行できません（$GITHUB_REF）"
+          exit 1
+
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: ${{ env.PUBLISH_BRANCH }}
           persist-credentials: false
-      - id: r
-        name: Resolve commits
+
+      - id: tool
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - id: resolve
         env:
           EVENT: ${{ github.event_name }}
-          # 入力は式展開でスクリプトに埋め込まず、環境変数として渡す（resolve.sh で書式を検査する）
           IN_SINCE: ${{ inputs.since }}
           IN_UNTIL: ${{ inputs.until }}
         run: bash scripts/resolve.sh
@@ -68,10 +77,8 @@ jobs:
     if: needs.resolve.outputs.same != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 90
-    # 対象リポジトリのビルド（依存のインストールスクリプトを含む）という外部のコードを実行するジョブ。
-    # 書き込み権限は与えず、キャッシュも使わない（後続ジョブへの持ち込みを避ける）
     permissions:
-      contents: read # 公開リポジトリの取得のみ
+      contents: read
     strategy:
       fail-fast: true
       matrix:
@@ -84,6 +91,7 @@ jobs:
       - name: Checkout tool
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: ${{ needs.resolve.outputs.tool_sha }}
           path: tool
           persist-credentials: false
 
@@ -95,12 +103,11 @@ jobs:
           path: target
           persist-credentials: false
 
-      - name: Setup Node
-        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
           node-version: ${{ env.NODE_MAJOR }}
+          package-manager-cache: false
 
-      # ツール側の依存は対象のビルドより先に入れる。ツールの依存にはインストールスクリプトを実行させない
       - name: Install tool
         working-directory: tool
         run: npm ci --no-audit --no-fund --ignore-scripts
@@ -108,42 +115,34 @@ jobs:
       - name: Build target
         working-directory: target
         run: |
-          if npm ci --no-audit --no-fund; then
-            echo "INSTALL=npm ci" >> "$GITHUB_ENV"
-          else
-            echo "::warning::npm ci に失敗したため npm install で再試行します"
-            rm -rf node_modules
-            npm install --no-audit --no-fund
-            echo "INSTALL=npm install（npm ci 失敗）" >> "$GITHUB_ENV"
-          fi
+          npm ci --no-audit --no-fund
           npm run build
 
       - name: Snapshot
-        run: |
-          SNAP_SHA="$SHA" SNAP_NODE="$(node -v)" SNAP_INSTALL="$INSTALL" SNAP_COMMITTED_AT="$COMMITTED_AT" \
-            node tool/scripts/snapshot.mjs target/dist snapshot/snap.json.gz
+        run: >-
+          node tool/scripts/snapshot.mjs
+          --dist target/dist --source target --out snapshot/snap.json.gz
+          --sha "$SHA" --committed-at "$COMMITTED_AT"
 
-      - name: Upload snapshot
-        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: snapshot-${{ matrix.side }}
           path: snapshot/snap.json.gz
-          retention-days: 30
+          retention-days: 7
           if-no-files-found: error
 
   report:
     name: 比較して記録する
     needs: [resolve, build]
-    # 既定ブランチ以外から手動実行された場合は書き込まない
     if: >-
       ${{ !cancelled()
-          && github.ref_name == github.event.repository.default_branch
+          && github.ref == 'refs/heads/main'
           && needs.resolve.result == 'success'
           && (needs.build.result == 'success' || needs.build.result == 'skipped') }}
     runs-on: ubuntu-latest
     timeout-minutes: 20
     permissions:
-      contents: write # reports/ と state/ をコミットして push する
+      contents: write # reports/ と state/ の push
     env:
       KIND: ${{ needs.resolve.outputs.kind }}
       SINCE: ${{ needs.resolve.outputs.since }}
@@ -152,75 +151,53 @@ jobs:
       NEW_SHA: ${{ needs.resolve.outputs.new_sha }}
       OLD_DATE: ${{ needs.resolve.outputs.old_date }}
       NEW_DATE: ${{ needs.resolve.outputs.new_date }}
+      STATE_SHA: ${{ needs.resolve.outputs.state_sha }}
+      TOOL_SHA: ${{ needs.resolve.outputs.tool_sha }}
       SAME: ${{ needs.resolve.outputs.same }}
       DIR: ${{ needs.resolve.outputs.dir }}
     steps:
-      # 認証情報は .git/config に残さず、push の直前にだけ渡す
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          ref: ${{ needs.resolve.outputs.tool_sha }}
+          fetch-depth: 0
           persist-credentials: false
 
       - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6.5.0
         with:
           node-version: 22
+          package-manager-cache: false
 
       - run: npm ci --no-audit --no-fund --ignore-scripts
 
-      - name: Download old snapshot
-        if: env.SAME != 'true'
+      - if: env.SAME != 'true'
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: snapshot-old
-          path: snapshots/old
+          path: ${{ runner.temp }}/snapshots/old
 
-      - name: Download new snapshot
-        if: env.SAME != 'true'
+      - if: env.SAME != 'true'
         uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
         with:
           name: snapshot-new
-          path: snapshots/new
+          path: ${{ runner.temp }}/snapshots/new
 
       - name: Compare
-        run: |
-          # 出力先が想定の形でなければ止める（rm -rf の対象を限定する）
-          if ! [[ "$DIR" =~ ^reports/[0-9]{4}/[0-9]{8}-[0-9]{4}_[0-9]{8}-[0-9]{4}(-manual)?$ ]]; then
-            echo "::error::想定外の出力先です: $DIR"
-            exit 1
-          fi
-          args=(--out "$DIR" --kind "$KIND" --since "$SINCE" --until "$UNTIL"
-                --old-sha "$OLD_SHA" --new-sha "$NEW_SHA" --old-date "$OLD_DATE" --new-date "$NEW_DATE"
-                --repo "$TARGET_REPO" --tool-sha "$GITHUB_SHA")
-          if [ "$SAME" != "true" ]; then
-            args+=(--old snapshots/old/snap.json.gz --new snapshots/new/snap.json.gz)
-          fi
-          # 同じ期間を再実行した場合は上書きする
-          rm -rf "$DIR"
-          node scripts/compare.mjs "${args[@]}"
-          node scripts/index.mjs reports
-          cat "$DIR/README.md" >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Update state
-        if: env.KIND == 'weekly'
-        run: |
-          mkdir -p state
-          printf '{\n  "until": "%s",\n  "sha": "%s"\n}\n' "$UNTIL" "$NEW_SHA" > state/last.json
-
-      - name: Commit and push
         env:
-          GH_TOKEN: ${{ github.token }}
+          SNAPSHOTS: ${{ runner.temp }}/snapshots
+          REPORT_SRC: ${{ runner.temp }}/report
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          # state/ は定期実行でのみ作られる。手動実行だけの段階では存在しないので、あるときだけ加える
-          paths=(reports)
-          [ -e state ] && paths+=(state)
-          git add -- "${paths[@]}"
-          if git diff --cached --quiet; then
-            echo "変更なし"
-            exit 0
+          args=(--out "$REPORT_SRC" --summary "$GITHUB_STEP_SUMMARY"
+                --kind "$KIND" --since "$SINCE" --until "$UNTIL"
+                --old-sha "$OLD_SHA" --new-sha "$NEW_SHA" --old-date "$OLD_DATE" --new-date "$NEW_DATE"
+                --repo "$TARGET_REPO" --tool-sha "$TOOL_SHA")
+          if [ "$SAME" != "true" ]; then
+            args+=(--old "$SNAPSHOTS/old/snap.json.gz" --new "$SNAPSHOTS/new/snap.json.gz")
           fi
-          git commit -m "changelog: ${KIND} $(TZ=Asia/Tokyo date -d "$SINCE" '+%F %H:%M') → $(TZ=Asia/Tokyo date -d "$UNTIL" '+%F %H:%M') JST"
-          auth="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
-          echo "::add-mask::${auth#AUTHORIZATION: basic }"
-          git -c http.extraheader="$auth" pull --rebase --quiet origin "$GITHUB_REF_NAME"
-          git -c http.extraheader="$auth" push origin "HEAD:$GITHUB_REF_NAME"
+          node scripts/compare.mjs "${args[@]}"
+
+      - name: Publish
+        env:
+          REPORT_SRC: ${{ runner.temp }}/report
+          BRANCH: ${{ env.PUBLISH_BRANCH }}
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/publish.sh
