@@ -1,101 +1,125 @@
 #!/usr/bin/env bash
-# 比較する2時点のコミットを決め、GitHub Actions の出力に書く。
+# 比較する2時点のコミットを決め、GITHUB_OUTPUT に書き出す。
 #
-# 環境変数:
-#   TARGET_REPO, TARGET_BRANCH  対象リポジトリとブランチ
+# 環境変数
+#   TARGET_REPO, TARGET_BRANCH  比較対象のリポジトリとブランチ
 #   EVENT                       schedule または workflow_dispatch
-#   IN_SINCE, IN_UNTIL          手動実行時の入力（JST, "YYYY-MM-DD HH:MM"。IN_UNTIL は空なら現在）
-#   STATE_FILE                  定期実行の続きを記録するファイル
-#   GITHUB_OUTPUT               出力先（手元で試すときは任意のファイル）
-#
-# 時点 T のコミット:
-#   master の first-parent を古い順にたどり、コミット時刻の累積最大値が T 以下である最後のコミット。
-#   PR のマージコミットはマージ時刻がコミット時刻になる。累積最大値を使うのは、
-#   手元で古い日付に作られたコミットが後から直接 push された場合に、それを T 以前と誤認しないため。
+#   IN_SINCE, IN_UNTIL          手動実行の入力（JST, "YYYY-MM-DD HH:MM"。IN_UNTIL は空なら現在）
+#   STATE_FILE                  定期実行の状態ファイル（既定 state/last.json）
+#   META_DIR                    対象リポジトリの履歴を置くディレクトリ（既定 target-meta）
+#   NOW                         現在時刻の上書き（試験用）
+#   GITHUB_OUTPUT               出力先
 set -euo pipefail
 
 : "${TARGET_REPO:?}" "${TARGET_BRANCH:?}" "${EVENT:?}" "${GITHUB_OUTPUT:?}"
 STATE_FILE="${STATE_FILE:-state/last.json}"
 META_DIR="${META_DIR:-target-meta}"
-FMT='^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}$'
+NOW="${NOW:-now}"
+INPUT_FORMAT='^[0-9]{4}-[0-9]{2}-[0-9]{2} [0-9]{2}:[0-9]{2}$'
+DEFAULT_NODE=22
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-fail() { echo "::error::$*" >&2; exit 1; }
-to_iso() { TZ=Asia/Tokyo date -d "$1" --iso-8601=seconds; }
-to_epoch() { date -d "$1" +%s; }
+fail() {
+  echo "::error::$*" >&2
+  exit 1
+}
 
-if [ ! -d "$META_DIR" ]; then
+jst_iso() { TZ=Asia/Tokyo date -d "$1" --iso-8601=seconds; }
+epoch() { date -d "$1" +%s; }
+stamp() { TZ=Asia/Tokyo date -d "$1" +%Y%m%d-%H%M; }
+
+fetch_history() {
+  [ -d "$META_DIR" ] && return
   git clone --quiet --filter=blob:none --no-checkout --single-branch --branch "$TARGET_BRANCH" \
     "https://github.com/${TARGET_REPO}.git" "$META_DIR"
-fi
-REF="refs/heads/${TARGET_BRANCH}"
-
-rev_at() {
-  local t
-  t=$(to_epoch "$1")
-  git -C "$META_DIR" log --first-parent --reverse --format='%H %ct' "$REF" |
-    awk -v t="$t" '{ if ($2 > m) m = $2; if (m <= t) last = $1 } END { print last }'
 }
+
+commit_at() {
+  local limit
+  limit=$(epoch "$1")
+  git -C "$META_DIR" log --first-parent --reverse --format='%H %ct' "refs/heads/${TARGET_BRANCH}" |
+    awk -v limit="$limit" '{ if ($2 > latest) latest = $2; if (latest <= limit) found = $1 } END { print found }'
+}
+
 commit_date() { git -C "$META_DIR" log -1 --format=%cI "$1"; }
-state_get() { node -e 'const s = JSON.parse(require("fs").readFileSync(process.argv[1], "utf8")); console.log(s[process.argv[2]] ?? "")' "$STATE_FILE" "$1"; }
-node_of() {
-  local v
-  v=$(git -C "$META_DIR" show "$1:.github/workflows/astro.yml" 2>/dev/null |
-    sed -nE 's/.*node-version:[[:space:]]*["'\'']?([0-9]+).*/\1/p' | head -1 || true)
-  echo "${v:-22}"
+
+node_major() {
+  local version
+  version=$(git -C "$META_DIR" show "$1:.github/workflows/astro.yml" 2>/dev/null |
+    sed -nE 's/^[[:space:]]*node-version:[[:space:]]*["'\'']?([0-9]+)(\.[0-9x]+)*["'\'']?[[:space:]]*$/\1/p' | head -1 || true)
+  echo "${version:-}"
 }
 
+
+read_input() {
+  local name=$1 value=$2
+  [[ "$value" =~ $INPUT_FORMAT ]] || fail "${name}は YYYY-MM-DD HH:MM（JST）で指定する: '${value}'"
+  jst_iso "$value" || fail "${name}の日時を解釈できない: '${value}'"
+}
+
+fetch_history
+
+NOTICES=()
+STATE_SHA=""
 OLD=""
 if [ "$EVENT" = "schedule" ]; then
   KIND=weekly
-  UNTIL_ISO=$(TZ=Asia/Tokyo date --iso-8601=seconds)
+  UNTIL=$(jst_iso "$NOW")
   if [ -f "$STATE_FILE" ]; then
-    SINCE_ISO=$(state_get until)
-    OLD=$(state_get sha)
-    git -C "$META_DIR" cat-file -e "${OLD}^{commit}" 2>/dev/null ||
-      fail "記録済みのコミット ${OLD} が対象リポジトリに見つかりません"
+    STATE=$(node "$SCRIPT_DIR/state.mjs" read "$STATE_FILE") || fail "状態ファイルを読めない: $STATE_FILE"
+    SINCE=$(sed -n 's/^until=//p' <<<"$STATE")
+    STATE_SHA=$(sed -n 's/^sha=//p' <<<"$STATE")
+    git -C "$META_DIR" merge-base --is-ancestor "$STATE_SHA" "refs/heads/${TARGET_BRANCH}" 2>/dev/null ||
+      fail "記録済みのコミット ${STATE_SHA} が対象の ${TARGET_BRANCH} の履歴にない。README の復旧手順を参照"
+    OLD=$STATE_SHA
   else
-    SINCE_ISO=$(TZ=Asia/Tokyo date -d '7 days ago' --iso-8601=seconds)
+    SINCE=$(jst_iso "$NOW - 7 days")
+  fi
+elif [ "$EVENT" = "workflow_dispatch" ]; then
+  KIND=manual
+  SINCE=$(read_input "開始" "${IN_SINCE:-}")
+  if [ -n "${IN_UNTIL:-}" ]; then
+    UNTIL=$(read_input "終了" "$IN_UNTIL")
+  else
+    UNTIL=$(jst_iso "$NOW")
   fi
 else
-  KIND=manual
-  [[ "${IN_SINCE:-}" =~ $FMT ]] || fail "開始は YYYY-MM-DD HH:MM（JST）で指定してください: '${IN_SINCE:-}'"
-  SINCE_ISO=$(to_iso "$IN_SINCE") || fail "開始の日時を解釈できません: '$IN_SINCE'"
-  if [ -n "${IN_UNTIL:-}" ]; then
-    [[ "$IN_UNTIL" =~ $FMT ]] || fail "終了は YYYY-MM-DD HH:MM（JST）で指定してください: '$IN_UNTIL'"
-    UNTIL_ISO=$(to_iso "$IN_UNTIL") || fail "終了の日時を解釈できません: '$IN_UNTIL'"
-  else
-    UNTIL_ISO=$(TZ=Asia/Tokyo date --iso-8601=seconds)
-  fi
+  fail "未対応のイベント: $EVENT"
 fi
 
-[ "$(to_epoch "$SINCE_ISO")" -lt "$(to_epoch "$UNTIL_ISO")" ] || fail "開始 ${SINCE_ISO} が終了 ${UNTIL_ISO} より後です"
+[ "$(epoch "$SINCE")" -lt "$(epoch "$UNTIL")" ] || fail "開始 ${SINCE} が終了 ${UNTIL} 以降になっている"
 
-[ -n "$OLD" ] || OLD=$(rev_at "$SINCE_ISO")
-[ -n "$OLD" ] || fail "開始 ${SINCE_ISO} 以前のコミットがありません"
-NEW=$(rev_at "$UNTIL_ISO")
-[ -n "$NEW" ] || fail "終了 ${UNTIL_ISO} 以前のコミットがありません"
+[ -n "$OLD" ] || OLD=$(commit_at "$SINCE")
+[ -n "$OLD" ] || fail "開始 ${SINCE} 以前のコミットがない"
+NEW=$(commit_at "$UNTIL")
+[ -n "$NEW" ] || fail "終了 ${UNTIL} 以前のコミットがない"
 
 SAME=false
 [ "$OLD" = "$NEW" ] && SAME=true
 
-# 出力先ディレクトリ名: reports/YYYY/YYYYMMDD-HHMM_YYYYMMDD-HHMM[-manual]
-stamp() { TZ=Asia/Tokyo date -d "$1" +%Y%m%d-%H%M; }
-DIR="reports/$(TZ=Asia/Tokyo date -d "$UNTIL_ISO" +%Y)/$(stamp "$SINCE_ISO")_$(stamp "$UNTIL_ISO")"
+DIR="reports/$(TZ=Asia/Tokyo date -d "$UNTIL" +%Y)/$(stamp "$SINCE")_$(stamp "$UNTIL")"
 [ "$KIND" = manual ] && DIR="${DIR}-manual"
+
+OLD_NODE=$(node_major "$OLD")
+NEW_NODE=$(node_major "$NEW")
+[ -n "$OLD_NODE" ] || { NOTICES+=("${OLD:0:9} の Node の版を判定できなかったため ${DEFAULT_NODE} を使う"); OLD_NODE=$DEFAULT_NODE; }
+[ -n "$NEW_NODE" ] || { NOTICES+=("${NEW:0:9} の Node の版を判定できなかったため ${DEFAULT_NODE} を使う"); NEW_NODE=$DEFAULT_NODE; }
 
 {
   echo "kind=$KIND"
-  echo "since=$SINCE_ISO"
-  echo "until=$UNTIL_ISO"
+  echo "since=$SINCE"
+  echo "until=$UNTIL"
   echo "old_sha=$OLD"
   echo "new_sha=$NEW"
   echo "old_date=$(commit_date "$OLD")"
   echo "new_date=$(commit_date "$NEW")"
-  echo "old_node=$(node_of "$OLD")"
-  echo "new_node=$(node_of "$NEW")"
+  echo "old_node=$OLD_NODE"
+  echo "new_node=$NEW_NODE"
+  echo "state_sha=$STATE_SHA"
   echo "same=$SAME"
   echo "dir=$DIR"
 } >>"$GITHUB_OUTPUT"
 
-echo "期間: $SINCE_ISO → $UNTIL_ISO（$KIND）"
+for notice in "${NOTICES[@]}"; do echo "::notice::$notice"; done
+echo "期間: $SINCE → $UNTIL（$KIND）"
 echo "比較: $OLD → $NEW（同一: $SAME）"

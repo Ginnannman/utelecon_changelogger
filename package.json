@@ -1,13 +1,13 @@
 {
-  "name": "utelecon-changelog",
+  "name": "utelecon-changelogger",
   "private": true,
   "type": "module",
-  "description": "utelecon ポータルのビルド結果を2時点で比較し、変更ページの一覧と差分を記録する",
+  "description": "utelecon ポータルのビルド結果を2時点で比較し、変更ページの一覧と差分を記録する（非公式）",
   "engines": {
     "node": ">=18.17"
   },
   "scripts": {
-    "test": "node test/run.mjs"
+    "test": "node --test test/*.test.mjs"
   },
   "dependencies": {
     "diff": "9.0.0",
