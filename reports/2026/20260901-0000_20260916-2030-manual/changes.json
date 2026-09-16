@@ -1,0 +1,1145 @@
+{
+  "format": 2,
+  "kind": "manual",
+  "since": "2026-09-01T00:00:00+09:00",
+  "until": "2026-09-16T20:30:43+09:00",
+  "repo": "utelecon/utelecon.github.io",
+  "old": {
+    "sha": "b4c38042fa90c4b49176cafd8ecafa446e75dab6",
+    "committedAt": "2026-08-31T22:48:58+09:00",
+    "node": "v24.20.0"
+  },
+  "new": {
+    "sha": "18e2245e0d9b23fb32fa12781b0265e26a44d251",
+    "committedAt": "2026-09-16T17:12:43+09:00",
+    "node": "v24.20.0"
+  },
+  "toolSha": "b6b4ee2a444676418581952844b9ecdf860532d8",
+  "sharedContentMinPages": 5,
+  "generatedAt": "2026-09-16T11:35:51.515Z",
+  "warnings": [],
+  "counts": {
+    "pages": 55,
+    "sharedContent": 1,
+    "chrome": 0,
+    "assets": 128,
+    "files": 4,
+    "redirects": 0
+  },
+  "pages": [
+    {
+      "key": "/",
+      "title": "情報システムの総合案内サイト @ 東京大学",
+      "file": "pages/index.md",
+      "ja": {
+        "path": "/",
+        "state": "modified",
+        "oldSource": "src/pages/index.mdx",
+        "newSource": "src/pages/index.mdx"
+      },
+      "en": {
+        "path": "/en/",
+        "state": "modified",
+        "oldSource": "src/pages/en/index.mdx",
+        "newSource": "src/pages/en/index.mdx"
+      }
+    },
+    {
+      "key": "/eccs/",
+      "title": "教育用計算機システム（ECCS）",
+      "file": "pages/eccs.md",
+      "ja": {
+        "path": "/eccs/",
+        "state": "modified",
+        "oldSource": "src/pages/eccs/index.mdx",
+        "newSource": "src/pages/eccs/index.mdx"
+      },
+      "en": {
+        "path": "/en/eccs/",
+        "state": "modified",
+        "oldSource": "src/pages/en/eccs/index.mdx",
+        "newSource": "src/pages/en/eccs/index.mdx"
+      }
+    },
+    {
+      "key": "/eccs/asano-reservation/",
+      "title": "浅野情報基盤センター（本郷）演習室の予約方法・予約状況",
+      "file": "pages/eccs__asano-reservation.md",
+      "ja": {
+        "path": "/eccs/asano-reservation/",
+        "state": "modified",
+        "oldSource": "src/pages/eccs/asano-reservation.mdx",
+        "newSource": "src/pages/eccs/asano-reservation.mdx"
+      },
+      "en": {
+        "path": "/en/eccs/asano-reservation/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/eccs/asano-reservation.mdx",
+        "newSource": "src/pages/en/eccs/asano-reservation.mdx"
+      }
+    },
+    {
+      "key": "/events/2026-09-09/",
+      "title": "2026/09/09 説明会：東京大学における情報システムとコミュニケーションツール",
+      "file": "pages/events__2026-09-09.md",
+      "ja": {
+        "path": "/events/2026-09-09/",
+        "state": "modified",
+        "oldSource": "src/pages/events/2026-09-09/index.md",
+        "newSource": "src/pages/events/2026-09-09/index.md"
+      },
+      "en": {
+        "path": "/en/events/2026-09-09/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/events/2026-09-11-genai-sympo-ws-ii/",
+      "title": "第二回「生成AIと教育について考える」ワークショップ",
+      "file": "pages/events__2026-09-11-genai-sympo-ws-ii.md",
+      "ja": {
+        "path": "/events/2026-09-11-genai-sympo-ws-ii/",
+        "state": "modified",
+        "oldSource": "src/pages/events/2026-09-11-genai-sympo-ws-ii/index.md",
+        "newSource": "src/pages/events/2026-09-11-genai-sympo-ws-ii/index.md"
+      },
+      "en": {
+        "path": "/en/events/2026-09-11-genai-sympo-ws-ii/",
+        "state": "modified",
+        "oldSource": "src/pages/en/events/2026-09-11-genai-sympo-ws-ii/index.md",
+        "newSource": "src/pages/en/events/2026-09-11-genai-sympo-ws-ii/index.md"
+      }
+    },
+    {
+      "key": "/faculty_members/",
+      "title": "東京大学における情報システムの準備について（教員向け）",
+      "file": "pages/faculty_members.md",
+      "ja": {
+        "path": "/faculty_members/",
+        "state": "modified",
+        "oldSource": "src/pages/faculty_members/index.mdx",
+        "newSource": "src/pages/faculty_members/index.mdx"
+      },
+      "en": {
+        "path": "/en/faculty_members/",
+        "state": "modified",
+        "oldSource": "src/pages/en/faculty_members/index.mdx",
+        "newSource": "src/pages/en/faculty_members/index.mdx"
+      }
+    },
+    {
+      "key": "/gen-ai/",
+      "title": "生成AI利活用ハンドブック (執筆中)",
+      "file": "pages/gen-ai.md",
+      "ja": {
+        "path": "/gen-ai/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/gen-ai/index.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/",
+      "title": "生成AIとは",
+      "file": "pages/gen-ai__basics.md",
+      "ja": {
+        "path": "/gen-ai/basics/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/gen-ai/basics/index.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/ask/",
+      "title": "AIと対話する",
+      "file": "pages/gen-ai__basics__ask.md",
+      "ja": {
+        "path": "/gen-ai/basics/ask/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/gen-ai/basics/ask.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/ask/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/input-output-files/",
+      "title": "ファイルを読ませる・出力させる",
+      "file": "pages/gen-ai__basics__input-output-files.md",
+      "ja": {
+        "path": "/gen-ai/basics/input-output-files/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/gen-ai/basics/input-output-files.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/input-output-files/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/private-mode/",
+      "title": "プライベートモード",
+      "file": "pages/gen-ai__basics__private-mode.md",
+      "ja": {
+        "path": "/gen-ai/basics/private-mode/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/gen-ai/basics/private-mode.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/private-mode/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/responsible-use/",
+      "title": "責任あるAI利用",
+      "file": "pages/gen-ai__basics__responsible-use.md",
+      "ja": {
+        "path": "/gen-ai/basics/responsible-use/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/gen-ai/basics/responsible-use.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/responsible-use/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/share-conversations/",
+      "title": "AIとの会話を共有する",
+      "file": "pages/gen-ai__basics__share-conversations.md",
+      "ja": {
+        "path": "/gen-ai/basics/share-conversations/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/gen-ai/basics/share-conversations.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/share-conversations/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/education/ai-use-policy-levels/",
+      "title": "授業課題・取り組みにおけるAI利用範囲の類型と表示",
+      "file": "pages/gen-ai__education__ai-use-policy-levels.md",
+      "ja": {
+        "path": "/gen-ai/education/ai-use-policy-levels/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/education/ai-use-policy-levels.md",
+        "newSource": "src/pages/gen-ai/education/ai-use-policy-levels.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/education/ai-use-policy-levels/",
+        "state": "modified",
+        "oldSource": "src/pages/en/gen-ai/education/ai-use-policy-levels.md",
+        "newSource": "src/pages/en/gen-ai/education/ai-use-policy-levels.md"
+      }
+    },
+    {
+      "key": "/gen-ai/security/",
+      "title": "情報セキュリティと情報漏洩リスク",
+      "file": "pages/gen-ai__security.md",
+      "ja": {
+        "path": "/gen-ai/security/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/gen-ai/security/index.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/security/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/good-practice/",
+      "title": "グッドプラクティスの共有",
+      "file": "pages/good-practice.md",
+      "ja": {
+        "path": "/good-practice/",
+        "state": "modified",
+        "oldSource": "src/pages/good-practice/index.mdx",
+        "newSource": "src/pages/good-practice/index.mdx"
+      },
+      "en": {
+        "path": "/en/good-practice/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/good-practice/interview/higuchi/",
+      "title": "樋口亮介 先生 刑法第２部",
+      "file": "pages/good-practice__interview__higuchi.md",
+      "ja": {
+        "path": "/good-practice/interview/higuchi/",
+        "state": "modified",
+        "oldSource": "src/pages/good-practice/interview/higuchi.md",
+        "newSource": "src/pages/good-practice/interview/higuchi.mdx"
+      },
+      "en": {
+        "path": "/en/good-practice/interview/higuchi/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/good-practice/interview/hirose/",
+      "title": "廣瀬敬 先生 固体地球科学",
+      "file": "pages/good-practice__interview__hirose.md",
+      "ja": {
+        "path": "/good-practice/interview/hirose/",
+        "state": "modified",
+        "oldSource": "src/pages/good-practice/interview/hirose.md",
+        "newSource": "src/pages/good-practice/interview/hirose.mdx"
+      },
+      "en": {
+        "path": "/en/good-practice/interview/hirose/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/good-practice/interview/kato/",
+      "title": "加藤晃史 先生 ベクトル解析",
+      "file": "pages/good-practice__interview__kato.md",
+      "ja": {
+        "path": "/good-practice/interview/kato/",
+        "state": "modified",
+        "oldSource": "src/pages/good-practice/interview/kato.md",
+        "newSource": "src/pages/good-practice/interview/kato.mdx"
+      },
+      "en": {
+        "path": "/en/good-practice/interview/kato/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/good-practice/interview/yonezawa/",
+      "title": "米澤智洋 先生 内分泌病学Ⅰ",
+      "file": "pages/good-practice__interview__yonezawa.md",
+      "ja": {
+        "path": "/good-practice/interview/yonezawa/",
+        "state": "modified",
+        "oldSource": "src/pages/good-practice/interview/yonezawa.md",
+        "newSource": "src/pages/good-practice/interview/yonezawa.mdx"
+      },
+      "en": {
+        "path": "/en/good-practice/interview/yonezawa/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/google/",
+      "title": "ECCSクラウドメール (Google Workspace)",
+      "file": "pages/google.md",
+      "ja": {
+        "path": "/google/",
+        "state": "unchanged",
+        "oldSource": "src/pages/google/index.mdx",
+        "newSource": "src/pages/google/index.mdx"
+      },
+      "en": {
+        "path": "/en/google/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/index.mdx",
+        "newSource": "src/pages/en/google/index.mdx"
+      }
+    },
+    {
+      "key": "/google/group/",
+      "title": "Googleグループ",
+      "file": "pages/google__group.md",
+      "ja": {
+        "path": "/google/group/",
+        "state": "unchanged",
+        "oldSource": "src/pages/google/group/index.mdx",
+        "newSource": "src/pages/google/group/index.mdx"
+      },
+      "en": {
+        "path": "/en/google/group/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/group/index.mdx",
+        "newSource": "src/pages/en/google/group/index.mdx"
+      }
+    },
+    {
+      "key": "/google/group/mail_sender/",
+      "title": "Googleグループのメールアドレスを差出人に指定してメールを送信する",
+      "file": "pages/google__group__mail_sender.md",
+      "ja": {
+        "path": "/google/group/mail_sender/",
+        "state": "modified",
+        "oldSource": "src/pages/google/group/mail_sender/index.md",
+        "newSource": "src/pages/google/group/mail_sender/index.md"
+      },
+      "en": {
+        "path": "/en/google/group/mail_sender/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/group/mail_sender/index.mdx",
+        "newSource": "src/pages/en/google/group/mail_sender/index.md"
+      }
+    },
+    {
+      "key": "/google/misc/alias/",
+      "title": "ECCSクラウドメールのGmailでg.ecc.u-tokyo.ac.jp以外のドメインのメールアドレスを利用する方法と注意点",
+      "file": "pages/google__misc__alias.md",
+      "ja": {
+        "path": "/google/misc/alias/",
+        "state": "unchanged",
+        "oldSource": "src/pages/google/misc/alias/index.md",
+        "newSource": "src/pages/google/misc/alias/index.md"
+      },
+      "en": {
+        "path": "/en/google/misc/alias/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/en/google/misc/alias/index.md"
+      }
+    },
+    {
+      "key": "/google/misc/education-plus/",
+      "title": "Google Workspace for Education Plusライセンス",
+      "file": "pages/google__misc__education-plus.md",
+      "ja": {
+        "path": "/google/misc/education-plus/",
+        "state": "modified",
+        "oldSource": "src/pages/google/misc/education-plus/index.md",
+        "newSource": "src/pages/google/misc/education-plus/index.md"
+      },
+      "en": {
+        "path": "/en/google/misc/education-plus/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/misc/education-plus/index.mdx",
+        "newSource": "src/pages/en/google/misc/education-plus/index.mdx"
+      }
+    },
+    {
+      "key": "/microsoft/windows_education_for_students/",
+      "title": "Windows Education for students",
+      "file": "pages/microsoft__windows_education_for_students.md",
+      "ja": {
+        "path": "/microsoft/windows_education_for_students/",
+        "state": "unchanged",
+        "oldSource": "src/pages/microsoft/windows_education_for_students.md",
+        "newSource": "src/pages/microsoft/windows_education_for_students.md"
+      },
+      "en": {
+        "path": "/en/microsoft/windows_education_for_students/",
+        "state": "modified",
+        "oldSource": "src/pages/en/microsoft/windows_education_for_students.md",
+        "newSource": "src/pages/en/microsoft/windows_education_for_students.md"
+      }
+    },
+    {
+      "key": "/notice/",
+      "title": "お知らせ",
+      "file": "pages/notice.md",
+      "ja": {
+        "path": "/notice/",
+        "state": "modified",
+        "oldSource": "src/pages/notice/index.mdx",
+        "newSource": "src/pages/notice/index.mdx"
+      },
+      "en": {
+        "path": "/en/notice/",
+        "state": "modified",
+        "oldSource": "src/pages/en/notice/index.mdx",
+        "newSource": "src/pages/en/notice/index.mdx"
+      }
+    },
+    {
+      "key": "/notice/2026/0302-gemini-gws/",
+      "title": "Googleドキュメント, Googleスライド, GoogleフォームでGeminiが使えるようになりました",
+      "file": "pages/notice__2026__0302-gemini-gws.md",
+      "ja": {
+        "path": "/notice/2026/0302-gemini-gws/",
+        "state": "modified",
+        "oldSource": "src/pages/notice/2026/0302-gemini-gws.md",
+        "newSource": "src/pages/notice/2026/0302-gemini-gws.md"
+      },
+      "en": {
+        "path": "/en/notice/2026/0302-gemini-gws/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/notice/2026/0903-rikaku/",
+      "title": "2026年度Aセメスター科目のUTOL履修確定日の取り扱いについて",
+      "file": "pages/notice__2026__0903-rikaku.md",
+      "ja": {
+        "path": "/notice/2026/0903-rikaku/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/notice/2026/0903-rikaku.md"
+      },
+      "en": {
+        "path": "/en/notice/2026/0903-rikaku/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/en/notice/2026/0903-rikaku.md"
+      }
+    },
+    {
+      "key": "/oc/",
+      "title": "大学生活に必要な情報システムの準備について（新入生向け）",
+      "file": "pages/oc.md",
+      "ja": {
+        "path": "/oc/",
+        "state": "modified",
+        "oldSource": "src/pages/oc/index.mdx",
+        "newSource": "src/pages/oc/index.mdx"
+      },
+      "en": {
+        "path": "/en/oc/",
+        "state": "modified",
+        "oldSource": "src/pages/en/oc/index.mdx",
+        "newSource": "src/pages/en/oc/index.mdx"
+      }
+    },
+    {
+      "key": "/oc/rooms/",
+      "title": "オンライン授業の受講に利用可能な教室の一覧",
+      "file": "pages/oc__rooms.md",
+      "ja": {
+        "path": "/oc/rooms/",
+        "state": "modified",
+        "oldSource": "src/pages/oc/rooms.mdx",
+        "newSource": "src/pages/oc/rooms.mdx"
+      },
+      "en": {
+        "path": "/en/oc/rooms/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/research_computing/",
+      "title": "全学向け高速計算機・データ活用基盤",
+      "file": "pages/research_computing.md",
+      "ja": {
+        "path": "/research_computing/",
+        "state": "unchanged",
+        "oldSource": "src/pages/research_computing/index.mdx",
+        "newSource": "src/pages/research_computing/index.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/",
+        "state": "modified",
+        "oldSource": "src/pages/en/research_computing/index.mdx",
+        "newSource": "src/pages/en/research_computing/index.mdx"
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/",
+      "title": "UTokyo Azure",
+      "file": "pages/research_computing__utokyo_azure.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/",
+        "state": "modified",
+        "oldSource": "src/pages/research_computing/utokyo_azure/index.mdx",
+        "newSource": "src/pages/research_computing/utokyo_azure/index.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/",
+        "state": "modified",
+        "oldSource": "src/pages/en/research_computing/utokyo_azure/index.mdx",
+        "newSource": "src/pages/en/research_computing/utokyo_azure/index.mdx"
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/csirt/",
+      "title": "UTokyo Azure CSIRT : UTokyo Azure",
+      "file": "pages/research_computing__utokyo_azure__csirt.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/csirt/",
+        "state": "unchanged",
+        "oldSource": "src/pages/research_computing/utokyo_azure/csirt/index.mdx",
+        "newSource": "src/pages/research_computing/utokyo_azure/csirt/index.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/csirt/",
+        "state": "modified",
+        "oldSource": "src/pages/en/research_computing/utokyo_azure/csirt/index.mdx",
+        "newSource": "src/pages/en/research_computing/utokyo_azure/csirt/index.mdx"
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/faq/",
+      "title": "FAQ：UTokyo Azure",
+      "file": "pages/research_computing__utokyo_azure__faq.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/faq/",
+        "state": "modified",
+        "oldSource": "src/pages/research_computing/utokyo_azure/faq/index.mdx",
+        "newSource": "src/pages/research_computing/utokyo_azure/faq/index.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/faq/",
+        "state": "modified",
+        "oldSource": "src/pages/en/research_computing/utokyo_azure/faq/index.mdx",
+        "newSource": "src/pages/en/research_computing/utokyo_azure/faq/index.mdx"
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/group/",
+      "title": "複数人グループでの利用や権限設定",
+      "file": "pages/research_computing__utokyo_azure__group.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/group/",
+        "state": "unchanged",
+        "oldSource": "src/pages/research_computing/utokyo_azure/group/index.mdx",
+        "newSource": "src/pages/research_computing/utokyo_azure/group/index.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/group/",
+        "state": "modified",
+        "oldSource": "src/pages/en/research_computing/utokyo_azure/group/index.mdx",
+        "newSource": "src/pages/en/research_computing/utokyo_azure/group/index.mdx"
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/support/",
+      "title": "Microsoft Azure サポートリクエスト",
+      "file": "pages/research_computing__utokyo_azure__support.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/support/",
+        "state": "unchanged",
+        "oldSource": "src/pages/research_computing/utokyo_azure/support/index.mdx",
+        "newSource": "src/pages/research_computing/utokyo_azure/support/index.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/support/",
+        "state": "modified",
+        "oldSource": "src/pages/en/research_computing/utokyo_azure/support/index.mdx",
+        "newSource": "src/pages/en/research_computing/utokyo_azure/support/index.mdx"
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/support/calculator/",
+      "title": "料金計算ツール",
+      "file": "pages/research_computing__utokyo_azure__support__calculator.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/support/calculator/",
+        "state": "unchanged",
+        "oldSource": "src/pages/research_computing/utokyo_azure/support/calculator.mdx",
+        "newSource": "src/pages/research_computing/utokyo_azure/support/calculator.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/support/calculator/",
+        "state": "modified",
+        "oldSource": "src/pages/en/research_computing/utokyo_azure/support/calculator.mdx",
+        "newSource": "src/pages/en/research_computing/utokyo_azure/support/calculator.mdx"
+      }
+    },
+    {
+      "key": "/sitemap/",
+      "title": "サイトマップ",
+      "file": "pages/sitemap.md",
+      "ja": {
+        "path": "/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/sitemap/index.mdx",
+        "newSource": "src/pages/sitemap/index.mdx"
+      },
+      "en": {
+        "path": "/en/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/en/sitemap/index.mdx",
+        "newSource": "src/pages/en/sitemap/index.mdx"
+      }
+    },
+    {
+      "key": "/slack/discount/",
+      "title": "東京大学におけるSlack「教育支援プログラム」の申し込み",
+      "file": "pages/slack__discount.md",
+      "ja": {
+        "path": "/slack/discount/",
+        "state": "modified",
+        "oldSource": "src/pages/slack/discount.md",
+        "newSource": "src/pages/slack/discount.md"
+      },
+      "en": {
+        "path": "/en/slack/discount/",
+        "state": "modified",
+        "oldSource": "src/pages/en/slack/discount.md",
+        "newSource": "src/pages/en/slack/discount.md"
+      }
+    },
+    {
+      "key": "/slido/",
+      "title": "Slido",
+      "file": "pages/slido.md",
+      "ja": {
+        "path": "/slido/",
+        "state": "modified",
+        "oldSource": "src/pages/slido/index.md",
+        "newSource": "src/pages/slido/index.md"
+      },
+      "en": {
+        "path": "/en/slido/",
+        "state": "modified",
+        "oldSource": "src/pages/en/slido/index.md",
+        "newSource": "src/pages/en/slido/index.md"
+      }
+    },
+    {
+      "key": "/staff_members/",
+      "title": "東京大学における情報システムの準備について（職員向け）",
+      "file": "pages/staff_members.md",
+      "ja": {
+        "path": "/staff_members/",
+        "state": "modified",
+        "oldSource": "src/pages/staff_members/index.mdx",
+        "newSource": "src/pages/staff_members/index.mdx"
+      },
+      "en": {
+        "path": "/en/staff_members/",
+        "state": "modified",
+        "oldSource": "src/pages/en/staff_members/index.mdx",
+        "newSource": "src/pages/en/staff_members/index.mdx"
+      }
+    },
+    {
+      "key": "/support/on-site/",
+      "title": "対面で相談する",
+      "file": "pages/support__on-site.md",
+      "ja": {
+        "path": "/support/on-site/",
+        "state": "modified",
+        "oldSource": "src/pages/support/on-site.md",
+        "newSource": "src/pages/support/on-site.md"
+      },
+      "en": {
+        "path": "/en/support/on-site/",
+        "state": "modified",
+        "oldSource": "src/pages/en/support/on-site.md",
+        "newSource": "src/pages/en/support/on-site.md"
+      }
+    },
+    {
+      "key": "/systems/leave/backup/",
+      "title": "離籍時のデータのバックアップについて",
+      "file": "pages/systems__leave__backup.md",
+      "ja": {
+        "path": "/systems/leave/backup/",
+        "state": "unchanged",
+        "oldSource": "src/pages/systems/leave/backup.mdx",
+        "newSource": "src/pages/systems/leave/backup.mdx"
+      },
+      "en": {
+        "path": "/en/systems/leave/backup/",
+        "state": "modified",
+        "oldSource": "src/pages/en/systems/leave/backup.mdx",
+        "newSource": "src/pages/en/systems/leave/backup.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_account/ident-myna/",
+      "title": "UTokyo Account 本人確認サービス",
+      "file": "pages/utokyo_account__ident-myna.md",
+      "ja": {
+        "path": "/utokyo_account/ident-myna/",
+        "state": "modified",
+        "oldSource": "src/pages/utokyo_account/ident-myna/index.mdx",
+        "newSource": "src/pages/utokyo_account/ident-myna/index.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_account/ident-myna/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/utokyo_account/ident-myna/index.mdx",
+        "newSource": "src/pages/en/utokyo_account/ident-myna/index.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_account/ident-myna/link/",
+      "title": "UTokyo Account本人確認サービスの事前連携について",
+      "file": "pages/utokyo_account__ident-myna__link.md",
+      "ja": {
+        "path": "/utokyo_account/ident-myna/link/",
+        "state": "modified",
+        "oldSource": "src/pages/utokyo_account/ident-myna/link/index.mdx",
+        "newSource": "src/pages/utokyo_account/ident-myna/link/index.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_account/ident-myna/link/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/utokyo_account/ident-myna/link/index.mdx",
+        "newSource": "src/pages/en/utokyo_account/ident-myna/link/index.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_account/ident-myna/unlink/",
+      "title": "UTokyo Account本人確認サービスの連携解除について",
+      "file": "pages/utokyo_account__ident-myna__unlink.md",
+      "ja": {
+        "path": "/utokyo_account/ident-myna/unlink/",
+        "state": "modified",
+        "oldSource": "src/pages/utokyo_account/ident-myna/unlink/index.mdx",
+        "newSource": "src/pages/utokyo_account/ident-myna/unlink/index.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_account/ident-myna/unlink/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/utokyo_account/mfa/",
+      "title": "UTokyo Accountにおける多要素認証の利用について",
+      "file": "pages/utokyo_account__mfa.md",
+      "ja": {
+        "path": "/utokyo_account/mfa/",
+        "state": "unchanged",
+        "oldSource": "src/pages/utokyo_account/mfa/index.mdx",
+        "newSource": "src/pages/utokyo_account/mfa/index.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_account/mfa/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utokyo_account/mfa/index.mdx",
+        "newSource": "src/pages/en/utokyo_account/mfa/index.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_vpn/macos/",
+      "title": "macOSでUTokyo VPNを利用する",
+      "file": "pages/utokyo_vpn__macos.md",
+      "ja": {
+        "path": "/utokyo_vpn/macos/",
+        "state": "modified",
+        "oldSource": "src/pages/utokyo_vpn/macos.mdx",
+        "newSource": "src/pages/utokyo_vpn/macos.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_vpn/macos/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utokyo_vpn/macos.mdx",
+        "newSource": "src/pages/en/utokyo_vpn/macos.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_wifi/android/",
+      "title": "AndroidでUTokyo Wi-Fiを利用する",
+      "file": "pages/utokyo_wifi__android.md",
+      "ja": {
+        "path": "/utokyo_wifi/android/",
+        "state": "unchanged",
+        "oldSource": "src/pages/utokyo_wifi/android.mdx",
+        "newSource": "src/pages/utokyo_wifi/android.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_wifi/android/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utokyo_wifi/android.mdx",
+        "newSource": "src/pages/en/utokyo_wifi/android.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_wifi/ios/",
+      "title": "iPhoneやiPadでUTokyo Wi-Fiを利用する",
+      "file": "pages/utokyo_wifi__ios.md",
+      "ja": {
+        "path": "/utokyo_wifi/ios/",
+        "state": "unchanged",
+        "oldSource": "src/pages/utokyo_wifi/ios.mdx",
+        "newSource": "src/pages/utokyo_wifi/ios.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_wifi/ios/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utokyo_wifi/ios.mdx",
+        "newSource": "src/pages/en/utokyo_wifi/ios.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_wifi/macos/",
+      "title": "macOS 26でUTokyo Wi-Fiを利用する",
+      "file": "pages/utokyo_wifi__macos.md",
+      "ja": {
+        "path": "/utokyo_wifi/macos/",
+        "state": "unchanged",
+        "oldSource": "src/pages/utokyo_wifi/macos.mdx",
+        "newSource": "src/pages/utokyo_wifi/macos.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_wifi/macos/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utokyo_wifi/macos.mdx",
+        "newSource": "src/pages/en/utokyo_wifi/macos.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_wifi/windows/",
+      "title": "WindowsでUTokyo Wi-Fiを利用する",
+      "file": "pages/utokyo_wifi__windows.md",
+      "ja": {
+        "path": "/utokyo_wifi/windows/",
+        "state": "unchanged",
+        "oldSource": "src/pages/utokyo_wifi/windows.mdx",
+        "newSource": "src/pages/utokyo_wifi/windows.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_wifi/windows/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utokyo_wifi/windows.mdx",
+        "newSource": "src/pages/en/utokyo_wifi/windows.mdx"
+      }
+    },
+    {
+      "key": "/utol/lecturers/settings/course_group/",
+      "title": "UTOLでコースグループ機能を利用する（教員・TA向け）",
+      "file": "pages/utol__lecturers__settings__course_group.md",
+      "ja": {
+        "path": "/utol/lecturers/settings/course_group/",
+        "state": "modified",
+        "oldSource": "src/pages/utol/lecturers/settings/course_group/index.md",
+        "newSource": "src/pages/utol/lecturers/settings/course_group/index.md"
+      },
+      "en": {
+        "path": "/en/utol/lecturers/settings/course_group/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/utol/lecturers/settings/course_group/index.md",
+        "newSource": "src/pages/en/utol/lecturers/settings/course_group/index.md"
+      }
+    },
+    {
+      "key": "/zoom/create_room/date_and_time/",
+      "title": "Zoom 開催日時の詳細な設定",
+      "file": "pages/zoom__create_room__date_and_time.md",
+      "ja": {
+        "path": "/zoom/create_room/date_and_time/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/create_room/date_and_time/index.md",
+        "newSource": "src/pages/zoom/create_room/date_and_time/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/create_room/date_and_time/",
+        "state": "modified",
+        "oldSource": "src/pages/en/zoom/create_room/date_and_time/index.mdx",
+        "newSource": "src/pages/en/zoom/create_room/date_and_time/index.mdx"
+      }
+    }
+  ],
+  "sharedContent": [
+    {
+      "file": "common/content-1.md",
+      "paths": [
+        "/good-practice/interview/irie/",
+        "/good-practice/interview/kono/",
+        "/good-practice/interview/kurita/",
+        "/good-practice/interview/nishimura/",
+        "/good-practice/interview/ohtsuki/",
+        "/good-practice/interview/saito/",
+        "/good-practice/interview/shiraishi/",
+        "/good-practice/interview/sugita/",
+        "/good-practice/interview/tanaka/",
+        "/good-practice/interview/yotsumoto/"
+      ]
+    }
+  ],
+  "chrome": [],
+  "assets": {
+    "added": [
+      "_astro/GoodPractice.BVPtzU7g.js",
+      "_astro/ai_L1.C22hgK45.svg",
+      "_astro/ai_L1.C22hgK45_zfJgM.svg",
+      "_astro/ai_L2.Ckca0r0h.svg",
+      "_astro/ai_L2.Ckca0r0h_zfJgM.svg",
+      "_astro/ai_L3.BIYe1fAl.svg",
+      "_astro/ai_L3.BIYe1fAl_zfJgM.svg",
+      "_astro/ai_L4.DN6aAFnQ.svg",
+      "_astro/ai_L4.DN6aAFnQ_zfJgM.svg",
+      "_astro/ai_L5.CGKtSUkb.svg",
+      "_astro/ai_L5.CGKtSUkb_zfJgM.svg",
+      "_astro/ai_L6.CHz75JQj.svg",
+      "_astro/ai_L6.CHz75JQj_zfJgM.svg",
+      "_astro/ai_L7.NxcNWccn.svg",
+      "_astro/ai_L7.NxcNWccn_zfJgM.svg",
+      "_astro/alias-01.SLyCa6-R_Z5dFrv.webp",
+      "_astro/alias-02.D99GrqOe_2bI6IU.webp",
+      "_astro/copilot_drive.DF6uXxqw_3ho8p.webp",
+      "_astro/copilot_new.BKkFJFO0_siF0m.webp",
+      "_astro/copilot_private.CIZF6ItY_Z2eIqMb.webp",
+      "_astro/copilot_start.BehBwdV2_1HxTGs.webp",
+      "_astro/copilot_upload.D4EqFaS6_1K8liN.webp",
+      "_astro/copilot_voice.DfVXuhHv_Z1djlr0.webp",
+      "_astro/gemini_drive.BgiWKztr_Z1pmtnX.webp",
+      "_astro/gemini_new.BafSHTRK_1LrtOA.webp",
+      "_astro/gemini_private.Dy9QzLV8_9cSMe.webp",
+      "_astro/gemini_share.CtQrA5Wo_Z22MNv0.webp",
+      "_astro/gemini_share_continue.D6QJD0Sf_1r39hP.webp",
+      "_astro/gemini_share_mode.CyrvNPGQ_ZKYOsw.webp",
+      "_astro/gemini_start.Bo-AzADD_13k2DM.webp",
+      "_astro/gemini_upload.AkXOS-H4_2q2aJ4.webp",
+      "_astro/gemini_voice.Bj4b78D6_1g2D0q.webp",
+      "_astro/groups01.Bjib9Y-g_Z1yhvfn.webp",
+      "_astro/groups02.CBZmOmV__ZFS2aD.webp",
+      "_astro/groups04.BO-ycwrH_1i7bnm.webp",
+      "_astro/groups05.l88AGi2Z_14CQUw.webp",
+      "_astro/groups06.0q-XfN35_Z1w38CT.webp",
+      "_astro/groups07.C_Vc0n-g_2ew8Tu.webp",
+      "_astro/groups09.lV-q-Hl3_Z101zsp.webp",
+      "_astro/groups10.rJeqxjwA_Z2f3NMN.webp",
+      "_astro/groups11.Bfcwe960_24407s.webp",
+      "_astro/groups12.DvFj0Bh0_edSKr.webp",
+      "_astro/groups13.uB4eFr6v_1VznQl.webp",
+      "_astro/groups14.fzpRGw_R_Z1l526S.webp",
+      "_astro/groups15.Bj-h2Pt2_1tBd8a.webp",
+      "_astro/higuchi_1.DFSypHc3.png",
+      "_astro/hirose_2.CecF5mPJ.png",
+      "_astro/hirose_3.CZeSxl0c.png",
+      "_astro/hirose_4.BQQ0rD6Y.png",
+      "_astro/hirose_5.B0FO8lf2.png",
+      "_astro/hirose_6.ButPHbAS.png",
+      "_astro/hirose_7.DP_lGcFC.png",
+      "_astro/kato_2.B2HDEzvg.png",
+      "_astro/kono_2.BcEG4a4g_Z2wPPzx.webp",
+      "_astro/kono_3.Cnuz8GJO_ZJVH9O.webp",
+      "_astro/kono_4.C5r4GXk-_Z1hU824.webp",
+      "_astro/kono_5.DrRhjq4M_2aqkaK.webp",
+      "_astro/kono_6.CRDIaO4y_N3nxE.webp",
+      "_astro/kono_7.CzRyKzhR_fH6KP.webp",
+      "_astro/kono_8.DWjZFe30_1FESrR.webp",
+      "_astro/kurita_2.DbwZFsnZ_ZQprMM.webp",
+      "_astro/kurita_3.1yqKTekT_Z25w8JP.webp",
+      "_astro/kurita_4.CLobOtva_1byjmL.webp",
+      "_astro/nishimura_2.CEAsg-t8_Zqb1kY.webp",
+      "_astro/nishimura_3.C6Iq1luI_Z1gbysz.webp",
+      "_astro/ohtsuki_2.BoJ44ElK_VDHVg.webp",
+      "_astro/research_computing.CK1lIaXU_1sPw5E.webp",
+      "_astro/schedule_date.BQl72PrW_Z2pjysC.webp",
+      "_astro/schedule_date.CvALmdB-_DrhYk.webp",
+      "_astro/schedule_recurring_check.BjwVlxTc_ZXaw0S.webp",
+      "_astro/schedule_recurring_check.CPAthLTx_Z1DoNdb.webp",
+      "_astro/schedule_recurring_no_fixed_time.CBi79UW8_2sIQQF.webp",
+      "_astro/schedule_recurring_no_fixed_time.dUycfDb7_1gnFRd.webp",
+      "_astro/shiraishi_2.fl8sdNTt_Z2bTspQ.webp",
+      "_astro/shiraishi_3.BQipwMuv_1GE9jt.webp",
+      "_astro/shiraishi_4.DZCUjvKG_1CgISj.webp",
+      "_astro/shiraishi_5.CFCPHBhf_ZcFtLk.webp",
+      "_astro/sugita_2.gPCvQzIm_Z26rr9B.webp",
+      "_astro/sugita_3.CfMvloX6_Z1qdus9.webp",
+      "_astro/tanaka_2.Cyd9eLbI_F5J5X.webp",
+      "_astro/utone.DcDu51oZ.svg",
+      "_astro/utone.DcDu51oZ_Z119Dcf.svg",
+      "_astro/yonezawa_2.DBdfoxQ-_Z38cGk.webp",
+      "_astro/yonezawa_3.C2pjXIsM_ZjP90y.webp",
+      "_astro/yonezawa_5.DnRntynk_ZQjCnF.webp",
+      "_astro/yonezawa_6.Bv1fonXf_QeWKe.webp",
+      "_astro/yotsumoto_2.C1tpawJv_FBkoV.webp",
+      "_astro/yotsumoto_3.DXzPdlVr_1M8mDu.webp",
+      "_astro/yotsumoto_4.D2ng_W3G_Zi65dA.webp"
+    ],
+    "removed": [
+      "_astro/GoodPractice.DhSIjizp.js",
+      "_astro/higuchi_1.DFSypHc3_j1kFJ.webp",
+      "_astro/hirose_2.CecF5mPJ_GlYtM.webp",
+      "_astro/hirose_3.CZeSxl0c_23HKBQ.webp",
+      "_astro/hirose_4.BQQ0rD6Y_1zpAEj.webp",
+      "_astro/hirose_5.B0FO8lf2_1mCYll.webp",
+      "_astro/hirose_6.ButPHbAS_uEqoe.webp",
+      "_astro/hirose_7.DP_lGcFC_Z1whfEz.webp",
+      "_astro/kato_2.B2HDEzvg_1EkVdl.webp",
+      "_astro/kono_2.BcEG4a4g_RGGUG.webp",
+      "_astro/kono_3.Cnuz8GJO_291IxK.webp",
+      "_astro/kono_4.C5r4GXk-_Z1mKoKP.webp",
+      "_astro/kono_5.DrRhjq4M_ZR6WNT.webp",
+      "_astro/kono_6.CRDIaO4y_IAqeP.webp",
+      "_astro/kono_7.CzRyKzhR_HvNjc.webp",
+      "_astro/kono_8.DWjZFe30_2dXsxJ.webp",
+      "_astro/kurita_2.DbwZFsnZ_Z246HLm.webp",
+      "_astro/kurita_3.1yqKTekT_1Pe0X4.webp",
+      "_astro/kurita_4.CLobOtva_Z3WJfb.webp",
+      "_astro/nishimura_2.CEAsg-t8_27LgHN.webp",
+      "_astro/nishimura_3.C6Iq1luI_ZYPkLn.webp",
+      "_astro/ohtsuki_2.BoJ44ElK_1KGN6v.webp",
+      "_astro/schedule_date.Dqg1Q4Pr_Zzr5ft.webp",
+      "_astro/schedule_recurring_check.lEvUvBbC_T84qf.webp",
+      "_astro/schedule_recurring_no_fixed_time.PnzianJ8_dMgRV.webp",
+      "_astro/shiraishi_2.fl8sdNTt_Z1bUilR.webp",
+      "_astro/shiraishi_3.BQipwMuv_ZwdGkp.webp",
+      "_astro/shiraishi_4.DZCUjvKG_319lj.webp",
+      "_astro/shiraishi_5.CFCPHBhf_o6RPf.webp",
+      "_astro/sugita_2.gPCvQzIm_Z1bvHnY.webp",
+      "_astro/sugita_3.CfMvloX6_Z1U1aRt.webp",
+      "_astro/tanaka_2.Cyd9eLbI_Z1gUAQa.webp",
+      "_astro/yonezawa_2.DBdfoxQ-_14JNI8.webp",
+      "_astro/yonezawa_3.C2pjXIsM_Z2wkfIr.webp",
+      "_astro/yonezawa_5.DnRntynk_Z5ORW7.webp",
+      "_astro/yonezawa_6.Bv1fonXf_CE6n.webp",
+      "_astro/yotsumoto_2.C1tpawJv_Z1Ma857.webp",
+      "_astro/yotsumoto_3.DXzPdlVr_Z26CGwp.webp",
+      "_astro/yotsumoto_4.D2ng_W3G_FR06m.webp"
+    ]
+  },
+  "files": [
+    {
+      "key": "/events/2026-09-09/slides/00_index_ja.pdf",
+      "status": "added",
+      "oldSize": null,
+      "newSize": 418499
+    },
+    {
+      "key": "/events/2026-09-09/slides/01_basics_ja.pdf",
+      "status": "added",
+      "oldSize": null,
+      "newSize": 2498826
+    },
+    {
+      "key": "/events/2026-09-09/slides/02_cloud_services.pdf",
+      "status": "added",
+      "oldSize": null,
+      "newSize": 4240159
+    },
+    {
+      "key": "/events/2026-09-09/slides/03_systems_for_education_ja.pdf",
+      "status": "added",
+      "oldSize": null,
+      "newSize": 9774401
+    }
+  ],
+  "redirects": []
+}
