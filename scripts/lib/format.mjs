@@ -29,12 +29,16 @@ export function slugOf(key) {
   return slug || "index";
 }
 
+export function encodePath(path) {
+  return path.split("/").map(encodeURIComponent).join("/");
+}
+
 export function siteUrl(urlPath) {
-  return SITE_URL + urlPath;
+  return SITE_URL + encodePath(urlPath);
 }
 
 export function githubUrl(repo, ...parts) {
-  return [`https://github.com/${repo}`, ...parts].join("/");
+  return [`https://github.com/${repo}`, ...parts.map(encodePath)].join("/");
 }
 
 const CONTROL_CHARS = /[\u0000-\u001f\u007f]+/g;
@@ -57,7 +61,8 @@ export function mdCode(value) {
 }
 
 export function mdLink(text, url) {
-  return `[${text}](<${encodeURI(url).replace(/[<>]/g, encodeURIComponent)}>)`;
+  const destination = url.replace(/[\u0000-\u0020<>\u007f]/g, (c) => `%${c.charCodeAt(0).toString(16).padStart(2, "0").toUpperCase()}`);
+  return `[${text}](<${destination}>)`;
 }
 
 export function diffFence(lines) {
