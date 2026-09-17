@@ -1,0 +1,25 @@
+# 樋口亮介 先生 刑法第２部
+
+| 言語 | 状態 | 公開ページ | ソース |
+|---|---|---|---|
+| 日本語 | 変更 | [`/good-practice/interview/higuchi/`](<https://utelecon.adm.u-tokyo.ac.jp/good-practice/interview/higuchi/>) | [`src/pages/good-practice/interview/higuchi.mdx`](<https://github.com/utelecon/utelecon.github.io/blob/18e2245e0d9b23fb32fa12781b0265e26a44d251/src/pages/good-practice/interview/higuchi.mdx>) |
+| English | — | — | — |
+
+## 日本語
+
+```diff
+  [グッドプラクティスの共有](/good-practice/) > 樋口亮介 先生 刑法第２部
+  # 樋口亮介 先生 刑法第２部
++ ［お断り］このページの内容の一部は，相当古い時点の情報に基づいています．最新の状態とは異なる可能性があるため，注意してください．
+  ## 授業の基本情報
+  授業名 : 刑法第２部
+  ⋯
+  学生のオンライン授業を受講するネットワーク環境はあまり良くないことも多く、ただでさえオンライン化により課題等が増え負担が掛かっている中で、学生の負担を軽減するせめてもの策として、授業を録画した動画を Google Drive にアップロードし、ITC-LMS を使って共有しました。
+  授業は 2〜3 部に分けて小休憩を挟んでいたので、Zoom のレコーディングをその都度停止して、動画を 2〜3 部に分けていました。そうすることで、何かトラブルがあっても被害を最小限にできるためです。
+- ![](/_astro/higuchi_1.webp)
++ ![](/_astro/higuchi_1.png)
+  ITC-LMS。事前に独自作成した資料を公開し、授業後に録画を公開しました
+  ## 苦労したところ
+```
+
+[← 一覧へ](<../README.md>)

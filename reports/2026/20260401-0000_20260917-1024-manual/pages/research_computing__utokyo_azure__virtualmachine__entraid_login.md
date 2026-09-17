@@ -1,0 +1,51 @@
+# UTokyo Account で仮想マシンに ssh ログインする
+
+| 言語 | 状態 | 公開ページ | ソース |
+|---|---|---|---|
+| 日本語 | 変更 | [`/research_computing/utokyo_azure/virtualmachine/entraid_login/`](<https://utelecon.adm.u-tokyo.ac.jp/research_computing/utokyo_azure/virtualmachine/entraid_login/>) | [`src/pages/research_computing/utokyo_azure/virtualmachine/entraid_login.mdx`](<https://github.com/utelecon/utelecon.github.io/blob/18e2245e0d9b23fb32fa12781b0265e26a44d251/src/pages/research_computing/utokyo_azure/virtualmachine/entraid_login.mdx>) |
+| English | — | — | — |
+
+## 日本語
+
+```diff
+  タイトル: UTokyo Account で仮想マシンに ssh ログインする | utelecon
+- 説明: 目次: 概要; １. Azure Cli をインストール; ２．仮想マシンの構成; ３．仮想マシンへログイン; 補足...
++ 説明: 目次: 概要; １. Azure CLI をインストール; ２．仮想マシンの構成; ３．仮想マシンへログイン; 補足...
+  
+  [全学向け高速計算機・データ活用基盤](/research_computing/) > [UTokyo Azure](/research_computing/utokyo_azure/) > [仮想マシン](/research_computing/utokyo_azure/virtualmachine/) > UTokyo Account で仮想マシンにログイン
+  ⋯
+  ## 概要
+  Azure 仮想マシンへのログインには，仮想マシンの作成時に予め必要な設定をすることによって UTokyo Account を使って ssh ログインすることもできます．
+- ## １. Azure Cli をインストール
+- 仮想マシンへは Azure Cli を使ってアクセスします．なので予め仮想マシンにアクセスする端末等の環境に Azure Cli をインストールしてください．
++ ## １. Azure CLI をインストール
++ 仮想マシンへは Azure CLI を使ってアクセスします．なので予め仮想マシンにアクセスする端末等の環境に Azure CLI をインストールしてください．
+  - 既にインストール済みの場合は，この項目はスキップしてください．
+  - [コマンドラインインターフェースでリソースを利用する](/research_computing/utokyo_azure/virtualmachine/azcli/)
+    - Azure CLI のインストールを進めてください．UTokyo Account で事前に認証するはこの後に説明がありますが，同じ手順ですのでここで行ってしまっても問題ありません．
+  ## ２．仮想マシンの構成
+- 以後は Linux OS の場合の説明になります。Windows OS の場合は以下の Microsoft Learn の記事を参照ください。 [Microsoft Learn:パスワードレスを含む Microsoft Entra ID を使用して Azure の Windows 仮想マシンにサインインする](https://learn.microsoft.com/ja-jp/entra/identity/devices/howto-vm-sign-in-azure-ad-windows)
++ 以後は Linux OS の場合の説明になります．Windows OS の場合は以下の Microsoft Learn の記事を参照ください． [Microsoft Learn:パスワードレスを含む Microsoft Entra ID を使用して Azure の Windows 仮想マシンにサインインする](https://learn.microsoft.com/ja-jp/entra/identity/devices/howto-vm-sign-in-azure-ad-windows)
+  [Virtual Machines : UTokyo Azure 利用例](/research_computing/utokyo_azure/virtualmachine/)とほぼ同じ手順で仮想マシンを作成します．一か所だけ，管理パートでMicrosoft Entra ID でログインにチェックを入れる必要がありますので，忘れずにチェックを入れてください．
+  ![](/_astro/01_entraidlogin1.webp)
+  ## ３．仮想マシンへログイン
+- - Azure Cli でまだ UTokyo Account の認証が済んでいない場合は，Azure Cli をインストールしたローカル環境でaz loginコマンドを実行し，UTokyo Account で認証を行ってください．
+- - 認証手順の詳細は、[コマンドラインインターフェースでリソースを利用する](/research_computing/utokyo_azure/virtualmachine/azcli/)のUTokyo Account で事前に認証するを参照ください．
+- 準備が整いましたら，以下の Azure Cli コマンドを実行してください．
++ - Azure CLI でまだ UTokyo Account の認証が済んでいない場合は，Azure CLI をインストールしたローカル環境でaz loginコマンドを実行し，UTokyo Account で認証を行ってください．
++ - 認証手順の詳細は，[コマンドラインインターフェースでリソースを利用する](/research_computing/utokyo_azure/virtualmachine/azcli/)のUTokyo Account で事前に認証するを参照ください．
++ 準備が整いましたら，以下の Azure CLI コマンドを実行してください．
+  az ssh vm -n [仮想マシンのリソース名] -g [仮想マシンリソースがあるリソースグループ名]
+- 問題なければ、以下の図のようにログインができます．
++ 問題なければ，以下の図のようにログインができます．
+  ![](/_astro/02_entraidlogin2.webp)
+  ## 補足
+  - 仮想マシンにはローカル環境から仮想マシンのグローバル IP へ ssh プロトコルでアクセスします．仮想マシンには最低限，ローカル環境の IP から ssh アクセスが許可されている必要があります．
+  - 仮想マシンの作成時に設定した初期アカウント（変更していなければazureuser）は利用されず，以下のアカウントが自動作成されます．
+-   - アカウント名：[UTokyo Account](../https://utelecon.adm.u-tokyo.ac.jp/utokyo_account/)の@以降を含めた文字列
++   - アカウント名：[UTokyo Account](/utokyo_account/)の@以降を含めた文字列
+    - グループ名：アカウント名と同じ
+    - ホームディレクトリ：/home/[数字10桁の共通ID]
+```
+
+[← 一覧へ](<../README.md>)
