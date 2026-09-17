@@ -36,7 +36,6 @@ jobs:
     permissions:
       contents: read
     outputs:
-      tool_sha: ${{ steps.tool.outputs.sha }}
       kind: ${{ steps.resolve.outputs.kind }}
       since: ${{ steps.resolve.outputs.since }}
       until: ${{ steps.resolve.outputs.until }}
@@ -58,17 +57,24 @@ jobs:
 
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: ${{ env.PUBLISH_BRANCH }}
           persist-credentials: false
 
-      - id: tool
-        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Read the latest state
+        env:
+          STATE_FILE: ${{ runner.temp }}/state/last.json
+        run: |
+          git fetch --quiet --depth=1 origin "$PUBLISH_BRANCH"
+          mkdir -p "$(dirname "$STATE_FILE")"
+          if git cat-file -e FETCH_HEAD:state/last.json 2>/dev/null; then
+            git show FETCH_HEAD:state/last.json > "$STATE_FILE"
+          fi
 
       - id: resolve
         env:
           EVENT: ${{ github.event_name }}
           IN_SINCE: ${{ inputs.since }}
           IN_UNTIL: ${{ inputs.until }}
+          STATE_FILE: ${{ runner.temp }}/state/last.json
         run: bash scripts/resolve.sh
 
   build:
@@ -91,7 +97,6 @@ jobs:
       - name: Checkout tool
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: ${{ needs.resolve.outputs.tool_sha }}
           path: tool
           persist-credentials: false
 
@@ -152,13 +157,11 @@ jobs:
       OLD_DATE: ${{ needs.resolve.outputs.old_date }}
       NEW_DATE: ${{ needs.resolve.outputs.new_date }}
       STATE_SHA: ${{ needs.resolve.outputs.state_sha }}
-      TOOL_SHA: ${{ needs.resolve.outputs.tool_sha }}
       SAME: ${{ needs.resolve.outputs.same }}
       DIR: ${{ needs.resolve.outputs.dir }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          ref: ${{ needs.resolve.outputs.tool_sha }}
           fetch-depth: 0
           persist-credentials: false
 
@@ -189,7 +192,7 @@ jobs:
           args=(--out "$REPORT_SRC" --summary "$GITHUB_STEP_SUMMARY"
                 --kind "$KIND" --since "$SINCE" --until "$UNTIL"
                 --old-sha "$OLD_SHA" --new-sha "$NEW_SHA" --old-date "$OLD_DATE" --new-date "$NEW_DATE"
-                --repo "$TARGET_REPO" --tool-sha "$TOOL_SHA")
+                --repo "$TARGET_REPO" --tool-sha "$GITHUB_SHA")
           if [ "$SAME" != "true" ]; then
             args+=(--old "$SNAPSHOTS/old/snap.json.gz" --new "$SNAPSHOTS/new/snap.json.gz")
           fi
