@@ -1,4 +1,5 @@
 import { matches } from "hast-util-select";
+import { escapeTablePipes } from "./format.mjs";
 
 const BLOCK_TAGS = new Set([
   "address", "article", "aside", "blockquote", "caption", "dd", "details",
@@ -147,6 +148,6 @@ function renderTableRow(row, context) {
   const cells = (row.children ?? [])
     .filter((cell) => cell.type === "element" && (cell.tagName === "td" || cell.tagName === "th"))
     .filter((cell) => !isExcluded(cell, context))
-    .map((cell) => renderChildren(cell.children ?? [], context).join(" ").replace(/\|/g, "\\|"));
+    .map((cell) => escapeTablePipes(renderChildren(cell.children ?? [], context).join(" ")));
   return cells.some(Boolean) ? [`| ${cells.join(" | ")} |`] : [];
 }
