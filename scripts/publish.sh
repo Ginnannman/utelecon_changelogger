@@ -38,9 +38,8 @@ commit_message() {
 prepare_worktree() {
   git_auth -C "$TOOL_DIR" fetch --quiet origin "$BRANCH"
   if [ -d "$WORKTREE" ]; then
-    git -C "$WORKTREE" checkout --quiet --detach "origin/$BRANCH"
     git -C "$WORKTREE" reset --quiet --hard "origin/$BRANCH"
-    git -C "$WORKTREE" clean --quiet -fd
+    git -C "$WORKTREE" clean --quiet -fdx
   else
     git -C "$TOOL_DIR" worktree add --quiet --detach "$WORKTREE" "origin/$BRANCH"
   fi
