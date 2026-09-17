@@ -52,8 +52,12 @@ export function mdText(value) {
     .replace(MARKDOWN_PUNCTUATION, "\\$&");
 }
 
+export function escapeTablePipes(text) {
+  return text.replace(/(\\*)\|/g, (_, backslashes) => `${backslashes}${backslashes}\\|`);
+}
+
 export function mdCode(value) {
-  const text = String(value ?? "").replace(CONTROL_CHARS, " ").replace(/\|/g, "\\|");
+  const text = escapeTablePipes(String(value ?? "").replace(CONTROL_CHARS, " "));
   const longestRun = Math.max(0, ...(text.match(/`+/g) ?? []).map((run) => run.length));
   const fence = "`".repeat(longestRun + 1);
   const padding = text.startsWith("`") || text.endsWith("`") ? " " : "";
