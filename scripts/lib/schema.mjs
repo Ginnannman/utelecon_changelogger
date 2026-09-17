@@ -22,7 +22,8 @@ import { LIMITS, SNAPSHOT_FORMAT } from "./config.mjs";
  * @property {{ pages: number, markers: Record<string, number> }} stats
  */
 
-const SITE_PATH = /^\/(?:[^\u0000-\u001f\u007f\\]*)$/;
+const FORBIDDEN_PATH_CHARS = /[\u0000-\u001f\u007f\\]/;
+const MAX_PATH_LENGTH = 1000;
 const SHA256 = /^[0-9a-f]{64}$/;
 
 export class SnapshotError extends Error {}
@@ -35,8 +36,23 @@ function isString(value, maxLength = LIMITS.lineLength) {
   return typeof value === "string" && value.length <= maxLength;
 }
 
+function hasValidSegments(path, { allowTrailingSlash }) {
+  const segments = path.split("/");
+  const last = segments.length - 1;
+  return segments.every((segment, index) => {
+    if (segment === "." || segment === "..") return false;
+    if (segment !== "") return true;
+    return index === 0 || (allowTrailingSlash && index === last);
+  });
+}
+
 function checkSitePath(path) {
-  if (!SITE_PATH.test(path) || path.split("/").includes("..")) fail(`不正なパス: ${JSON.stringify(path)}`);
+  const valid =
+    isString(path, MAX_PATH_LENGTH) &&
+    path.startsWith("/") &&
+    !FORBIDDEN_PATH_CHARS.test(path) &&
+    hasValidSegments(path, { allowTrailingSlash: true });
+  if (!valid) fail(`不正なパス: ${JSON.stringify(path)}`);
 }
 
 function checkLines(lines, label) {
@@ -45,9 +61,13 @@ function checkLines(lines, label) {
 }
 
 function checkSource(source, label) {
-  if (source !== null && !(isString(source, 1000) && source.startsWith("src/") && !source.split("/").includes(".."))) {
-    fail(`${label} のソースパスが不正`);
-  }
+  if (source === null) return;
+  const valid =
+    isString(source, MAX_PATH_LENGTH) &&
+    source.startsWith("src/") &&
+    !FORBIDDEN_PATH_CHARS.test(source) &&
+    hasValidSegments(`/${source}`, { allowTrailingSlash: false });
+  if (!valid) fail(`${label} のソースパスが不正`);
 }
 
 /**
