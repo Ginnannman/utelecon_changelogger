@@ -1,0 +1,499 @@
+{
+  "format": 2,
+  "kind": "weekly",
+  "since": "2026-09-14T04:54:01+09:00",
+  "until": "2026-09-21T04:54:01+09:00",
+  "repo": "utelecon/utelecon.github.io",
+  "old": {
+    "sha": "a8db0f72d688b8d045dba4404ed9c872b407461b",
+    "committedAt": "2026-09-13T21:50:32+09:00",
+    "node": "v24.20.0"
+  },
+  "new": {
+    "sha": "622296c7e37347cfdf4cc523c7c9c43c8fd31a20",
+    "committedAt": "2026-09-20T20:05:51+09:00",
+    "node": "v24.20.0"
+  },
+  "toolSha": "4a00a62f2b81968ae663115c3b6999232e75ef2e",
+  "sharedContentMinPages": 5,
+  "generatedAt": "2026-09-20T19:59:13.673Z",
+  "warnings": [],
+  "counts": {
+    "pages": 23,
+    "sharedContent": 0,
+    "chrome": 0,
+    "assets": 68,
+    "files": 0,
+    "redirects": 0
+  },
+  "pages": [
+    {
+      "key": "/eccs/chromeos/accessibility/",
+      "title": "ユーザー補助機能",
+      "file": "pages/eccs__chromeos__accessibility.md",
+      "ja": {
+        "path": "/eccs/chromeos/accessibility/",
+        "state": "modified",
+        "oldSource": "src/pages/eccs/chromeos/accessibility/index.mdx",
+        "newSource": "src/pages/eccs/chromeos/accessibility/index.mdx"
+      },
+      "en": {
+        "path": "/en/eccs/chromeos/accessibility/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/eccs/chromeos/accessibility/index.mdx",
+        "newSource": "src/pages/en/eccs/chromeos/accessibility/index.mdx"
+      }
+    },
+    {
+      "key": "/eccs/chromeos/storage/",
+      "title": "ChromeOSデバイスでのデータの保存（ストレージ）",
+      "file": "pages/eccs__chromeos__storage.md",
+      "ja": {
+        "path": "/eccs/chromeos/storage/",
+        "state": "modified",
+        "oldSource": "src/pages/eccs/chromeos/storage/index.mdx",
+        "newSource": "src/pages/eccs/chromeos/storage/index.mdx"
+      },
+      "en": {
+        "path": "/en/eccs/chromeos/storage/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/eccs/chromeos/storage/index.mdx",
+        "newSource": "src/pages/en/eccs/chromeos/storage/index.mdx"
+      }
+    },
+    {
+      "key": "/gen-ai/",
+      "title": "生成AI利活用ハンドブック (執筆中)",
+      "file": "pages/gen-ai.md",
+      "ja": {
+        "path": "/gen-ai/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/index.md",
+        "newSource": "src/pages/gen-ai/index.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/",
+      "title": "生成AIとは",
+      "file": "pages/gen-ai__basics.md",
+      "ja": {
+        "path": "/gen-ai/basics/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/basics/index.md",
+        "newSource": "src/pages/gen-ai/basics/index.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/ask/",
+      "title": "AIと対話する",
+      "file": "pages/gen-ai__basics__ask.md",
+      "ja": {
+        "path": "/gen-ai/basics/ask/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/basics/ask.md",
+        "newSource": "src/pages/gen-ai/basics/ask.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/ask/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/input-output-files/",
+      "title": "ファイルを読ませる・出力させる",
+      "file": "pages/gen-ai__basics__input-output-files.md",
+      "ja": {
+        "path": "/gen-ai/basics/input-output-files/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/basics/input-output-files.md",
+        "newSource": "src/pages/gen-ai/basics/input-output-files.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/input-output-files/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/private-mode/",
+      "title": "プライベートモード",
+      "file": "pages/gen-ai__basics__private-mode.md",
+      "ja": {
+        "path": "/gen-ai/basics/private-mode/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/basics/private-mode.md",
+        "newSource": "src/pages/gen-ai/basics/private-mode.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/private-mode/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/responsible-use/",
+      "title": "責任あるAI利用",
+      "file": "pages/gen-ai__basics__responsible-use.md",
+      "ja": {
+        "path": "/gen-ai/basics/responsible-use/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/basics/responsible-use.md",
+        "newSource": "src/pages/gen-ai/basics/responsible-use.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/responsible-use/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/basics/share-conversations/",
+      "title": "AIとの会話を共有する",
+      "file": "pages/gen-ai__basics__share-conversations.md",
+      "ja": {
+        "path": "/gen-ai/basics/share-conversations/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/basics/share-conversations.md",
+        "newSource": "src/pages/gen-ai/basics/share-conversations.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/basics/share-conversations/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/gen-ai/education/ai-use-policy-levels/",
+      "title": "授業課題・取り組みにおけるAI利用範囲の類型と表示",
+      "file": "pages/gen-ai__education__ai-use-policy-levels.md",
+      "ja": {
+        "path": "/gen-ai/education/ai-use-policy-levels/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/education/ai-use-policy-levels.md",
+        "newSource": "src/pages/gen-ai/education/ai-use-policy-levels.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/education/ai-use-policy-levels/",
+        "state": "modified",
+        "oldSource": "src/pages/en/gen-ai/education/ai-use-policy-levels.md",
+        "newSource": "src/pages/en/gen-ai/education/ai-use-policy-levels.md"
+      }
+    },
+    {
+      "key": "/gen-ai/security/",
+      "title": "情報セキュリティと情報漏洩リスク",
+      "file": "pages/gen-ai__security.md",
+      "ja": {
+        "path": "/gen-ai/security/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/security/index.md",
+        "newSource": "src/pages/gen-ai/security/index.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/security/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/google/",
+      "title": "ECCSクラウドメール (Google Workspace)",
+      "file": "pages/google.md",
+      "ja": {
+        "path": "/google/",
+        "state": "unchanged",
+        "oldSource": "src/pages/google/index.mdx",
+        "newSource": "src/pages/google/index.mdx"
+      },
+      "en": {
+        "path": "/en/google/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/index.mdx",
+        "newSource": "src/pages/en/google/index.mdx"
+      }
+    },
+    {
+      "key": "/google/drive/recommendation/",
+      "title": "Googleドライブ ファイル共有のおすすめの利用方法",
+      "file": "pages/google__drive__recommendation.md",
+      "ja": {
+        "path": "/google/drive/recommendation/",
+        "state": "unchanged",
+        "oldSource": "src/pages/google/drive/recommendation.mdx",
+        "newSource": "src/pages/google/drive/recommendation.mdx"
+      },
+      "en": {
+        "path": "/en/google/drive/recommendation/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/drive/recommendation.mdx",
+        "newSource": "src/pages/en/google/drive/recommendation.mdx"
+      }
+    },
+    {
+      "key": "/google/drive/share/",
+      "title": "Googleドライブでファイルを共有する",
+      "file": "pages/google__drive__share.md",
+      "ja": {
+        "path": "/google/drive/share/",
+        "state": "unchanged",
+        "oldSource": "src/pages/google/drive/share.mdx",
+        "newSource": "src/pages/google/drive/share.mdx"
+      },
+      "en": {
+        "path": "/en/google/drive/share/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/drive/share/index.mdx",
+        "newSource": "src/pages/en/google/drive/share/index.mdx"
+      }
+    },
+    {
+      "key": "/google/group/",
+      "title": "Googleグループ",
+      "file": "pages/google__group.md",
+      "ja": {
+        "path": "/google/group/",
+        "state": "unchanged",
+        "oldSource": "src/pages/google/group/index.mdx",
+        "newSource": "src/pages/google/group/index.mdx"
+      },
+      "en": {
+        "path": "/en/google/group/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/group/index.mdx",
+        "newSource": "src/pages/en/google/group/index.mdx"
+      }
+    },
+    {
+      "key": "/google/group/mail_sender/",
+      "title": "Googleグループのメールアドレスを差出人に指定してメールを送信する",
+      "file": "pages/google__group__mail_sender.md",
+      "ja": {
+        "path": "/google/group/mail_sender/",
+        "state": "modified",
+        "oldSource": "src/pages/google/group/mail_sender/index.md",
+        "newSource": "src/pages/google/group/mail_sender/index.md"
+      },
+      "en": {
+        "path": "/en/google/group/mail_sender/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/group/mail_sender/index.mdx",
+        "newSource": "src/pages/en/google/group/mail_sender/index.md"
+      }
+    },
+    {
+      "key": "/google/misc/education-plus/",
+      "title": "Google Workspace for Education Plusライセンス",
+      "file": "pages/google__misc__education-plus.md",
+      "ja": {
+        "path": "/google/misc/education-plus/",
+        "state": "modified",
+        "oldSource": "src/pages/google/misc/education-plus/index.md",
+        "newSource": "src/pages/google/misc/education-plus/index.md"
+      },
+      "en": {
+        "path": "/en/google/misc/education-plus/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/misc/education-plus/index.mdx",
+        "newSource": "src/pages/en/google/misc/education-plus/index.mdx"
+      }
+    },
+    {
+      "key": "/microsoft/windows_education_for_students/",
+      "title": "Windows Education for students",
+      "file": "pages/microsoft__windows_education_for_students.md",
+      "ja": {
+        "path": "/microsoft/windows_education_for_students/",
+        "state": "unchanged",
+        "oldSource": "src/pages/microsoft/windows_education_for_students.md",
+        "newSource": "src/pages/microsoft/windows_education_for_students.md"
+      },
+      "en": {
+        "path": "/en/microsoft/windows_education_for_students/",
+        "state": "modified",
+        "oldSource": "src/pages/en/microsoft/windows_education_for_students.md",
+        "newSource": "src/pages/en/microsoft/windows_education_for_students.md"
+      }
+    },
+    {
+      "key": "/notice/2026/0302-gemini-gws/",
+      "title": "Googleドキュメント, Googleスライド, GoogleフォームでGeminiが使えるようになりました",
+      "file": "pages/notice__2026__0302-gemini-gws.md",
+      "ja": {
+        "path": "/notice/2026/0302-gemini-gws/",
+        "state": "modified",
+        "oldSource": "src/pages/notice/2026/0302-gemini-gws.md",
+        "newSource": "src/pages/notice/2026/0302-gemini-gws.md"
+      },
+      "en": {
+        "path": "/en/notice/2026/0302-gemini-gws/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/sitemap/",
+      "title": "サイトマップ",
+      "file": "pages/sitemap.md",
+      "ja": {
+        "path": "/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/sitemap/index.mdx",
+        "newSource": "src/pages/sitemap/index.mdx"
+      },
+      "en": {
+        "path": "/en/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/en/sitemap/index.mdx",
+        "newSource": "src/pages/en/sitemap/index.mdx"
+      }
+    },
+    {
+      "key": "/slido/",
+      "title": "Slido",
+      "file": "pages/slido.md",
+      "ja": {
+        "path": "/slido/",
+        "state": "modified",
+        "oldSource": "src/pages/slido/index.md",
+        "newSource": "src/pages/slido/index.md"
+      },
+      "en": {
+        "path": "/en/slido/",
+        "state": "modified",
+        "oldSource": "src/pages/en/slido/index.md",
+        "newSource": "src/pages/en/slido/index.md"
+      }
+    },
+    {
+      "key": "/systems/leave/backup/",
+      "title": "離籍時のデータのバックアップについて",
+      "file": "pages/systems__leave__backup.md",
+      "ja": {
+        "path": "/systems/leave/backup/",
+        "state": "unchanged",
+        "oldSource": "src/pages/systems/leave/backup.mdx",
+        "newSource": "src/pages/systems/leave/backup.mdx"
+      },
+      "en": {
+        "path": "/en/systems/leave/backup/",
+        "state": "modified",
+        "oldSource": "src/pages/en/systems/leave/backup.mdx",
+        "newSource": "src/pages/en/systems/leave/backup.mdx"
+      }
+    },
+    {
+      "key": "/zoom/create_room/registration/",
+      "title": "Zoomミーティングで参加者に登録を求める",
+      "file": "pages/zoom__create_room__registration.md",
+      "ja": {
+        "path": "/zoom/create_room/registration/",
+        "state": "unchanged",
+        "oldSource": "src/pages/zoom/create_room/registration/index.md",
+        "newSource": "src/pages/zoom/create_room/registration/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/create_room/registration/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/en/zoom/create_room/registration/index.md"
+      }
+    }
+  ],
+  "sharedContent": [],
+  "chrome": [],
+  "assets": {
+    "added": [
+      "_astro/ChangeToRegister.fwAgSJpA_Z232JpJ.webp",
+      "_astro/DeadlineCheckOn.DFyW36hU_ZM0DJe.webp",
+      "_astro/DeadlineChooseMeeting.s1xgTjT4_ZbKROA.webp",
+      "_astro/DeadlineEditOption.CCznKlIj_Z2ujhUU.webp",
+      "_astro/DesignBrandingTab.CgmB3_cD_15oENg.webp",
+      "_astro/DesignChooseMeeting.BQETwbxd_Z2hxlb8.webp",
+      "_astro/FormChooseMeeting.Vsgi4ZRs_ZGONlp.webp",
+      "_astro/FormEditOption.Dx_1mkxK_Z1bjAoo.webp",
+      "_astro/FormQuestionnaireAddOriginal.Dq8sC59a_23PQ31.webp",
+      "_astro/FormQuestionnaireOriginalQuestionSave.Cc0aiyU3_Z21nwjS.webp",
+      "_astro/FormQuestionnaireOriginalQuestion_new.DhN4bCqu_Z1vhRDA.webp",
+      "_astro/FormQuestionnaireTab.BI7j7fIQ_Z21HXeB.webp",
+      "_astro/FormRegisterTab.BUbB2Cn6_ZDgALf.webp",
+      "_astro/ManualAccepted.CP2PCUyO_2fV2Xs.webp",
+      "_astro/ManualApplied.Da8yynGs_Z1QR4UR.webp",
+      "_astro/ManualChooseMeeting.BTema80d_ZY89Ve.webp",
+      "_astro/ManualEditOption.h8teTdgB_ZmShTK.webp",
+      "_astro/ManualManage.CYKIsP1g_1fMWV6.webp",
+      "_astro/ManualRejected.B2xYy7aJ_1bnLNi.webp",
+      "_astro/ManualRejectedList.CIfEzdHi_1qjm0r.webp",
+      "_astro/ManualRejectedMessage.DbmY9ixR_Z12FxMJ.webp",
+      "_astro/MustRegisterCheckOn.guapEOM2_vuCQh.webp",
+      "_astro/OnlyVerifiedUserCheckOn.DNdftpf__Z1oEjJd.webp",
+      "_astro/OnlyVerifiedUserDomain.CsZ7lCJt_14lU19.webp",
+      "_astro/RegisterLink.BDCZxvKI_212bMl.webp",
+      "_astro/RegistrationForm_new.RPN5qeq__Z2jHRWl.webp",
+      "_astro/RegularChangeToRegister.DhIQvRS1_qKzYC.webp",
+      "_astro/RegularChooseMeeting.AlOuBhx__Z2oH0o4.webp",
+      "_astro/RegularEditButton.CS6AKZfX_Z2gwlzL.webp",
+      "_astro/ResendMailChooseMeeting.BKEfctAr_ZTSTJe.webp",
+      "_astro/ResendMailResend.DO869VoK_ZkB5B7.webp",
+      "_astro/ResendMailShowList.cV694QjR_1BLWwm.webp",
+      "_astro/ViewChooseMeeting.v-XdK8oK_Z2hLK7f.webp",
+      "_astro/ViewManage.ddAgintM_Z8TM9P.webp",
+      "_astro/ViewReportMeeting.BZ_SXV4H_ZSxios.webp",
+      "_astro/ViewReportMenu.Yp2oG25T_Z1frPrK.webp",
+      "_astro/ViewReportSelect.DQAD1qXu_1XlVb2.webp",
+      "_astro/ViewReportStatus.Dj180DXm_U0Vnm.webp",
+      "_astro/ViewReportWho.BvBiW2cv_Zpee0.webp",
+      "_astro/add-google-account-browser.ySXERHzK_BEEUM.webp",
+      "_astro/add-google-account-confirm.8N3kkqZH_Zx14XK.webp",
+      "_astro/add-google-account-settings.URqau5Jq_Z1FuIfv.webp",
+      "_astro/drive-insufficient-space.DlCrtjTH_KSxhT.webp",
+      "_astro/external-storage-settings.CXzqPA1k_Z1YHFIW.webp",
+      "_astro/google-signin-2fa.CE2TDwze_Z1ifGbQ.webp",
+      "_astro/google-signin-agree.DRzpYmMK_1Sfquq.webp",
+      "_astro/google-signin-email.BUu08pe6_ZMrdY5.webp",
+      "_astro/google-signin-password.D3KkwqdN_Gw60s.webp",
+      "_astro/groups01.Bjib9Y-g_Z1yhvfn.webp",
+      "_astro/groups02.CBZmOmV__ZFS2aD.webp",
+      "_astro/groups04.BO-ycwrH_1i7bnm.webp",
+      "_astro/groups05.l88AGi2Z_14CQUw.webp",
+      "_astro/groups06.0q-XfN35_Z1w38CT.webp",
+      "_astro/groups07.C_Vc0n-g_2ew8Tu.webp",
+      "_astro/groups09.lV-q-Hl3_Z101zsp.webp",
+      "_astro/groups10.rJeqxjwA_Z2f3NMN.webp",
+      "_astro/groups11.Bfcwe960_24407s.webp",
+      "_astro/groups12.DvFj0Bh0_edSKr.webp",
+      "_astro/groups13.uB4eFr6v_1VznQl.webp",
+      "_astro/groups14.fzpRGw_R_Z1l526S.webp",
+      "_astro/groups15.Bj-h2Pt2_1tBd8a.webp",
+      "_astro/onedrive-files-app.BsYR950L_Z1jS018.webp",
+      "_astro/onedrive-setup-failed.Dnb7d_RZ_1ILYev.webp",
+      "_astro/onedrive-signed-in.BTfPE5NN_Z1rQIGy.webp",
+      "_astro/onedrive-signin-permission.BKGbmKBp_Z1fmrRA.webp",
+      "_astro/onedrive-signin-select-account.C9i5sjFx_Z1bKRQN.webp",
+      "_astro/removable-device-notification.CaxNLMEK_ZwShT4.webp",
+      "_astro/usb-eject.Bu9mVxkW_ZSuTsJ.webp"
+    ],
+    "removed": []
+  },
+  "files": [],
+  "redirects": []
+}
