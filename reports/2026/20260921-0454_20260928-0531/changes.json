@@ -1,0 +1,251 @@
+{
+  "format": 2,
+  "kind": "weekly",
+  "since": "2026-09-21T04:54:01+09:00",
+  "until": "2026-09-28T05:31:32+09:00",
+  "repo": "utelecon/utelecon.github.io",
+  "old": {
+    "sha": "622296c7e37347cfdf4cc523c7c9c43c8fd31a20",
+    "committedAt": "2026-09-20T20:05:51+09:00",
+    "node": "v24.21.0"
+  },
+  "new": {
+    "sha": "b4892a611c51dd3864402e23ae1512ab875e7742",
+    "committedAt": "2026-09-27T21:02:30+09:00",
+    "node": "v24.21.0"
+  },
+  "toolSha": "48bafe71b09c816ad6f9c20e3b8cfa910f0bc2ee",
+  "sharedContentMinPages": 5,
+  "generatedAt": "2026-09-27T20:36:49.357Z",
+  "warnings": [],
+  "counts": {
+    "pages": 11,
+    "sharedContent": 0,
+    "chrome": 0,
+    "assets": 24,
+    "files": 0,
+    "redirects": 0
+  },
+  "pages": [
+    {
+      "key": "/",
+      "title": "情報システムの総合案内サイト @ 東京大学",
+      "file": "pages/index.md",
+      "ja": {
+        "path": "/",
+        "state": "modified",
+        "oldSource": "src/pages/index.mdx",
+        "newSource": "src/pages/index.mdx"
+      },
+      "en": {
+        "path": "/en/",
+        "state": "modified",
+        "oldSource": "src/pages/en/index.mdx",
+        "newSource": "src/pages/en/index.mdx"
+      }
+    },
+    {
+      "key": "/change2021s/",
+      "title": "2021年春のシステム変更",
+      "file": "pages/change2021s.md",
+      "ja": {
+        "path": "/change2021s/",
+        "state": "unchanged",
+        "oldSource": "src/pages/change2021s/index.mdx",
+        "newSource": "src/pages/change2021s/index.mdx"
+      },
+      "en": {
+        "path": "/en/change2021s/",
+        "state": "modified",
+        "oldSource": "src/pages/en/change2021s/index.mdx",
+        "newSource": "src/pages/en/change2021s/index.mdx"
+      }
+    },
+    {
+      "key": "/change2021s/webex/",
+      "title": "2021年春のシステム変更 Webexの詳細",
+      "file": "pages/change2021s__webex.md",
+      "ja": {
+        "path": "/change2021s/webex/",
+        "state": "unchanged",
+        "oldSource": "src/pages/change2021s/webex.mdx",
+        "newSource": "src/pages/change2021s/webex.mdx"
+      },
+      "en": {
+        "path": "/en/change2021s/webex/",
+        "state": "modified",
+        "oldSource": "src/pages/en/change2021s/webex.mdx",
+        "newSource": "src/pages/en/change2021s/webex.mdx"
+      }
+    },
+    {
+      "key": "/microsoft/signin/",
+      "title": "UTokyo Accountを用いてMicrosoftのシステムにサインインする",
+      "file": "pages/microsoft__signin.md",
+      "ja": {
+        "path": "/microsoft/signin/",
+        "state": "modified",
+        "oldSource": "src/pages/microsoft/signin.md",
+        "newSource": "src/pages/microsoft/signin.md"
+      },
+      "en": {
+        "path": "/en/microsoft/signin/",
+        "state": "modified",
+        "oldSource": "src/pages/en/microsoft/signin.md",
+        "newSource": "src/pages/en/microsoft/signin.md"
+      }
+    },
+    {
+      "key": "/notice/",
+      "title": "お知らせ",
+      "file": "pages/notice.md",
+      "ja": {
+        "path": "/notice/",
+        "state": "modified",
+        "oldSource": "src/pages/notice/index.mdx",
+        "newSource": "src/pages/notice/index.mdx"
+      },
+      "en": {
+        "path": "/en/notice/",
+        "state": "modified",
+        "oldSource": "src/pages/en/notice/index.mdx",
+        "newSource": "src/pages/en/notice/index.mdx"
+      }
+    },
+    {
+      "key": "/notice/2026/0801-zoom-contract-renewal/",
+      "title": "東京大学におけるZoomの提供内容の変更について",
+      "file": "pages/notice__2026__0801-zoom-contract-renewal.md",
+      "ja": {
+        "path": "/notice/2026/0801-zoom-contract-renewal/",
+        "state": "modified",
+        "oldSource": "src/pages/notice/2026/0801-zoom-contract-renewal.md",
+        "newSource": "src/pages/notice/2026/0801-zoom-contract-renewal.md"
+      },
+      "en": {
+        "path": "/en/notice/2026/0801-zoom-contract-renewal/",
+        "state": "modified",
+        "oldSource": "src/pages/en/notice/2026/0801-zoom-contract-renewal.md",
+        "newSource": "src/pages/en/notice/2026/0801-zoom-contract-renewal.md"
+      }
+    },
+    {
+      "key": "/notice/2026/0925-postpone_zoom_cloudrec_deletion/",
+      "title": "東京大学におけるZoomの提供内容の変更について（第2報：クラウド録画削除開始日の延期）",
+      "file": "pages/notice__2026__0925-postpone_zoom_cloudrec_deletion.md",
+      "ja": {
+        "path": "/notice/2026/0925-postpone_zoom_cloudrec_deletion/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/notice/2026/0925-postpone_zoom_cloudrec_deletion.mdx"
+      },
+      "en": {
+        "path": "/en/notice/2026/0925-postpone_zoom_cloudrec_deletion/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/en/notice/2026/0925-postpone_zoom_cloudrec_deletion.mdx"
+      }
+    },
+    {
+      "key": "/sitemap/",
+      "title": "サイトマップ",
+      "file": "pages/sitemap.md",
+      "ja": {
+        "path": "/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/sitemap/index.mdx",
+        "newSource": "src/pages/sitemap/index.mdx"
+      },
+      "en": {
+        "path": "/en/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/en/sitemap/index.mdx",
+        "newSource": "src/pages/en/sitemap/index.mdx"
+      }
+    },
+    {
+      "key": "/systems/",
+      "title": "東京大学のシステム",
+      "file": "pages/systems.md",
+      "ja": {
+        "path": "/systems/",
+        "state": "modified",
+        "oldSource": "src/pages/systems/index.mdx",
+        "newSource": "src/pages/systems/index.mdx"
+      },
+      "en": {
+        "path": "/en/systems/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/systems/index.mdx",
+        "newSource": "src/pages/en/systems/index.mdx"
+      }
+    },
+    {
+      "key": "/zoom/",
+      "title": "Zoom",
+      "file": "pages/zoom.md",
+      "ja": {
+        "path": "/zoom/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/index.mdx",
+        "newSource": "src/pages/zoom/index.mdx"
+      },
+      "en": {
+        "path": "/en/zoom/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/zoom/index.mdx",
+        "newSource": "src/pages/en/zoom/index.mdx"
+      }
+    },
+    {
+      "key": "/zoom/usage/layout/",
+      "title": "Zoom ミーティング画面のレイアウト",
+      "file": "pages/zoom__usage__layout.md",
+      "ja": {
+        "path": "/zoom/usage/layout/",
+        "state": "unchanged",
+        "oldSource": "src/pages/zoom/usage/layout/index.md",
+        "newSource": "src/pages/zoom/usage/layout/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/usage/layout/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/en/zoom/usage/layout/index.md"
+      }
+    }
+  ],
+  "sharedContent": [],
+  "chrome": [],
+  "assets": {
+    "added": [
+      "_astro/customize1.DDemi5ah_Bx9mb.webp",
+      "_astro/customize2.CCyLDtjB_Z1Hl2Ic.webp",
+      "_astro/focus_off.CuJEBaGf_286rQT.webp",
+      "_astro/focus_on1.DiZDvDRK_KLsE9.webp",
+      "_astro/focus_on2.Ddbp4M32_Z18OcYk.webp",
+      "_astro/focus_on3.D9Pusx-6_1oeBhN.webp",
+      "_astro/focus_spotlight_share.kr_M1Nls_24KxB7.webp",
+      "_astro/gallery.4SXRE9mS_Io2sK.webp",
+      "_astro/gallery_max1.DO8de8pz_ZrU9od.webp",
+      "_astro/gallery_max2.DqYIFd7X_ZlBHil.webp",
+      "_astro/gallery_max3.n-lnPxa4_rYPML.webp",
+      "_astro/leftright.BD7VgCEc_1t5xsz.webp",
+      "_astro/leftright_default2.DarNHmle_Z1P4tO8.webp",
+      "_astro/leftright_ratio.DN1BR-2k_ZI6SkF.webp",
+      "_astro/pin_off.Cjc-zy7F_Z5pKd0.webp",
+      "_astro/pin_on.RvWf2VMl_1kxrjk.webp",
+      "_astro/share.CXU4zcQ7_mYOTe.webp",
+      "_astro/speaker.DQpK5ebH_Z1uh5aT.webp",
+      "_astro/spotlight_add.Cp_3lb2M_ZCvBqx.webp",
+      "_astro/spotlight_off.D-H7s0ey_ZzXv9M.webp",
+      "_astro/spotlight_on.BBOkXeBB_Zq4nT6.webp",
+      "_astro/swap_off.BcwbkpFZ_Z1zMqSF.webp",
+      "_astro/swap_on.B1wqtqGy_Z19z4L.webp",
+      "_astro/view_switch.CRimTF0w_Z1fM4s1.webp"
+    ],
+    "removed": []
+  },
+  "files": [],
+  "redirects": []
+}
