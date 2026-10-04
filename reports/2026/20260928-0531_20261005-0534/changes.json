@@ -1,0 +1,483 @@
+{
+  "format": 2,
+  "kind": "weekly",
+  "since": "2026-09-28T05:31:32+09:00",
+  "until": "2026-10-05T05:34:05+09:00",
+  "repo": "utelecon/utelecon.github.io",
+  "old": {
+    "sha": "b4892a611c51dd3864402e23ae1512ab875e7742",
+    "committedAt": "2026-09-27T21:02:30+09:00",
+    "node": "v24.21.0"
+  },
+  "new": {
+    "sha": "41648565847ebc9bd14160a8b1090829b1803beb",
+    "committedAt": "2026-10-01T17:11:17+09:00",
+    "node": "v24.21.0"
+  },
+  "toolSha": "f1fca8d92469f7cda7afdfac250980109f14c8fb",
+  "sharedContentMinPages": 5,
+  "generatedAt": "2026-10-04T20:39:17.770Z",
+  "warnings": [],
+  "counts": {
+    "pages": 21,
+    "sharedContent": 0,
+    "chrome": 0,
+    "assets": 85,
+    "files": 0,
+    "redirects": 0
+  },
+  "pages": [
+    {
+      "key": "/",
+      "title": "情報システムの総合案内サイト @ 東京大学",
+      "file": "pages/index.md",
+      "ja": {
+        "path": "/",
+        "state": "modified",
+        "oldSource": "src/pages/index.mdx",
+        "newSource": "src/pages/index.mdx"
+      },
+      "en": {
+        "path": "/en/",
+        "state": "modified",
+        "oldSource": "src/pages/en/index.mdx",
+        "newSource": "src/pages/en/index.mdx"
+      }
+    },
+    {
+      "key": "/gen-ai/education/ai-use-policy-levels/",
+      "title": "授業課題・取り組みにおけるAI利用範囲の類型と表示",
+      "file": "pages/gen-ai__education__ai-use-policy-levels.md",
+      "ja": {
+        "path": "/gen-ai/education/ai-use-policy-levels/",
+        "state": "modified",
+        "oldSource": "src/pages/gen-ai/education/ai-use-policy-levels.md",
+        "newSource": "src/pages/gen-ai/education/ai-use-policy-levels.md"
+      },
+      "en": {
+        "path": "/en/gen-ai/education/ai-use-policy-levels/",
+        "state": "modified",
+        "oldSource": "src/pages/en/gen-ai/education/ai-use-policy-levels.md",
+        "newSource": "src/pages/en/gen-ai/education/ai-use-policy-levels.md"
+      }
+    },
+    {
+      "key": "/google/forms/",
+      "title": "Googleフォーム",
+      "file": "pages/google__forms.md",
+      "ja": {
+        "path": "/google/forms/",
+        "state": "modified",
+        "oldSource": "src/pages/google/forms/index.md",
+        "newSource": "src/pages/google/forms/index.md"
+      },
+      "en": {
+        "path": "/en/google/forms/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/en/google/forms/index.md"
+      }
+    },
+    {
+      "key": "/google/youtube/live/",
+      "title": "クラウドメールアカウントでのYouTubeライブ配信方法",
+      "file": "pages/google__youtube__live.md",
+      "ja": {
+        "path": "/google/youtube/live/",
+        "state": "modified",
+        "oldSource": "src/pages/google/youtube/live/index.mdx",
+        "newSource": "src/pages/google/youtube/live/index.mdx"
+      },
+      "en": {
+        "path": "/en/google/youtube/live/",
+        "state": "modified",
+        "oldSource": "src/pages/en/google/youtube/live/index.mdx",
+        "newSource": "src/pages/en/google/youtube/live/index.mdx"
+      }
+    },
+    {
+      "key": "/google/youtube/live/streaming/zoom/",
+      "title": "ZoomミーティングやウェビナーをYouTubeでストリーミング配信する",
+      "file": "pages/google__youtube__live__streaming__zoom.md",
+      "ja": {
+        "path": "/google/youtube/live/streaming/zoom/",
+        "state": "modified",
+        "oldSource": "src/pages/google/youtube/live/streaming/zoom/index.mdx",
+        "newSource": "src/pages/google/youtube/live/streaming/zoom/index.mdx"
+      },
+      "en": {
+        "path": "/en/google/youtube/live/streaming/zoom/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/en/google/youtube/live/streaming/zoom/index.mdx"
+      }
+    },
+    {
+      "key": "/newsletter/archives/",
+      "title": "uteleconメールマガジン バックナンバー",
+      "file": "pages/newsletter__archives.md",
+      "ja": {
+        "path": "/newsletter/archives/",
+        "state": "modified",
+        "oldSource": "src/pages/newsletter/archives/index.mdx",
+        "newSource": "src/pages/newsletter/archives/index.mdx"
+      },
+      "en": {
+        "path": "/en/newsletter/archives/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/newsletter/archives/20260930/",
+      "title": "vol.6",
+      "file": "pages/newsletter__archives__20260930.md",
+      "ja": {
+        "path": "/newsletter/archives/20260930/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/newsletter/archives/20260930/index.md"
+      },
+      "en": {
+        "path": "/en/newsletter/archives/20260930/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/notice/",
+      "title": "お知らせ",
+      "file": "pages/notice.md",
+      "ja": {
+        "path": "/notice/",
+        "state": "modified",
+        "oldSource": "src/pages/notice/index.mdx",
+        "newSource": "src/pages/notice/index.mdx"
+      },
+      "en": {
+        "path": "/en/notice/",
+        "state": "modified",
+        "oldSource": "src/pages/en/notice/index.mdx",
+        "newSource": "src/pages/en/notice/index.mdx"
+      }
+    },
+    {
+      "key": "/notice/2026/0801-zoom-contract-renewal/",
+      "title": "東京大学におけるZoomの提供内容の変更について",
+      "file": "pages/notice__2026__0801-zoom-contract-renewal.md",
+      "ja": {
+        "path": "/notice/2026/0801-zoom-contract-renewal/",
+        "state": "unchanged",
+        "oldSource": "src/pages/notice/2026/0801-zoom-contract-renewal.md",
+        "newSource": "src/pages/notice/2026/0801-zoom-contract-renewal.md"
+      },
+      "en": {
+        "path": "/en/notice/2026/0801-zoom-contract-renewal/",
+        "state": "modified",
+        "oldSource": "src/pages/en/notice/2026/0801-zoom-contract-renewal.md",
+        "newSource": "src/pages/en/notice/2026/0801-zoom-contract-renewal.md"
+      }
+    },
+    {
+      "key": "/notice/2026/0903-rikaku/",
+      "title": "2026年度Aセメスター科目のUTOL履修確定日の取り扱いについて",
+      "file": "pages/notice__2026__0903-rikaku.md",
+      "ja": {
+        "path": "/notice/2026/0903-rikaku/",
+        "state": "modified",
+        "oldSource": "src/pages/notice/2026/0903-rikaku.md",
+        "newSource": "src/pages/notice/2026/0903-rikaku.md"
+      },
+      "en": {
+        "path": "/en/notice/2026/0903-rikaku/",
+        "state": "modified",
+        "oldSource": "src/pages/en/notice/2026/0903-rikaku.md",
+        "newSource": "src/pages/en/notice/2026/0903-rikaku.md"
+      }
+    },
+    {
+      "key": "/notice/2026/0928-utol-ai/",
+      "title": "UTOLの課題機能でAI利用範囲の設定が必須になります",
+      "file": "pages/notice__2026__0928-utol-ai.md",
+      "ja": {
+        "path": "/notice/2026/0928-utol-ai/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/notice/2026/0928-utol-ai/index.md"
+      },
+      "en": {
+        "path": "/en/notice/2026/0928-utol-ai/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/en/notice/2026/0928-utol-ai/index.md"
+      }
+    },
+    {
+      "key": "/sitemap/",
+      "title": "サイトマップ",
+      "file": "pages/sitemap.md",
+      "ja": {
+        "path": "/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/sitemap/index.mdx",
+        "newSource": "src/pages/sitemap/index.mdx"
+      },
+      "en": {
+        "path": "/en/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/en/sitemap/index.mdx",
+        "newSource": "src/pages/en/sitemap/index.mdx"
+      }
+    },
+    {
+      "key": "/systems/",
+      "title": "東京大学のシステム",
+      "file": "pages/systems.md",
+      "ja": {
+        "path": "/systems/",
+        "state": "unchanged",
+        "oldSource": "src/pages/systems/index.mdx",
+        "newSource": "src/pages/systems/index.mdx"
+      },
+      "en": {
+        "path": "/en/systems/",
+        "state": "modified",
+        "oldSource": "src/pages/en/systems/index.mdx",
+        "newSource": "src/pages/en/systems/index.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_account/mfa/change/",
+      "title": "UTokyo Account多要素認証の本人確認方法の登録変更手順",
+      "file": "pages/utokyo_account__mfa__change.md",
+      "ja": {
+        "path": "/utokyo_account/mfa/change/",
+        "state": "unchanged",
+        "oldSource": "src/pages/utokyo_account/mfa/change/index.mdx",
+        "newSource": "src/pages/utokyo_account/mfa/change/index.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_account/mfa/change/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utokyo_account/mfa/change/index.mdx",
+        "newSource": "src/pages/en/utokyo_account/mfa/change/index.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_account/mfa/fido-security_key/",
+      "title": "UTokyo Account多要素認証におけるFIDOセキュリティキーの利用方法",
+      "file": "pages/utokyo_account__mfa__fido-security_key.md",
+      "ja": {
+        "path": "/utokyo_account/mfa/fido-security_key/",
+        "state": "modified",
+        "oldSource": "src/pages/utokyo_account/mfa/fido-security_key/index.mdx",
+        "newSource": "src/pages/utokyo_account/mfa/fido-security_key/index.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_account/mfa/fido-security_key/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utokyo_account/mfa/fido-security_key/index.md",
+        "newSource": "src/pages/en/utokyo_account/mfa/fido-security_key/index.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_account/mfa/initial/",
+      "title": "UTokyo Account多要素認証の初期設定手順",
+      "file": "pages/utokyo_account__mfa__initial.md",
+      "ja": {
+        "path": "/utokyo_account/mfa/initial/",
+        "state": "modified",
+        "oldSource": "src/pages/utokyo_account/mfa/initial/index.mdx",
+        "newSource": "src/pages/utokyo_account/mfa/initial/index.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_account/mfa/initial/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utokyo_account/mfa/initial/index.mdx",
+        "newSource": "src/pages/en/utokyo_account/mfa/initial/index.mdx"
+      }
+    },
+    {
+      "key": "/utokyo_account/mfa/yubikey-totp/",
+      "title": "UTokyo Account多要素認証におけるYubico Authenticatorアプリの利用方法",
+      "file": "pages/utokyo_account__mfa__yubikey-totp.md",
+      "ja": {
+        "path": "/utokyo_account/mfa/yubikey-totp/",
+        "state": "modified",
+        "oldSource": "src/pages/utokyo_account/mfa/yubikey-totp/index.mdx",
+        "newSource": "src/pages/utokyo_account/mfa/yubikey-totp/index.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_account/mfa/yubikey-totp/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utokyo_account/mfa/yubikey-totp/index.md",
+        "newSource": "src/pages/en/utokyo_account/mfa/yubikey-totp/index.md"
+      }
+    },
+    {
+      "key": "/utol/lecturers/assignments/",
+      "title": "UTOLで課題機能を利用する（教員・TA向け）",
+      "file": "pages/utol__lecturers__assignments.md",
+      "ja": {
+        "path": "/utol/lecturers/assignments/",
+        "state": "modified",
+        "oldSource": "src/pages/utol/lecturers/assignments/index.mdx",
+        "newSource": "src/pages/utol/lecturers/assignments/index.mdx"
+      },
+      "en": {
+        "path": "/en/utol/lecturers/assignments/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utol/lecturers/assignments/index.mdx",
+        "newSource": "src/pages/en/utol/lecturers/assignments/index.mdx"
+      }
+    },
+    {
+      "key": "/utol/students/",
+      "title": "UTOLを履修者として利用する",
+      "file": "pages/utol__students.md",
+      "ja": {
+        "path": "/utol/students/",
+        "state": "modified",
+        "oldSource": "src/pages/utol/students/index.mdx",
+        "newSource": "src/pages/utol/students/index.mdx"
+      },
+      "en": {
+        "path": "/en/utol/students/",
+        "state": "modified",
+        "oldSource": "src/pages/en/utol/students/index.mdx",
+        "newSource": "src/pages/en/utol/students/index.mdx"
+      }
+    },
+    {
+      "key": "/zoom/",
+      "title": "Zoom",
+      "file": "pages/zoom.md",
+      "ja": {
+        "path": "/zoom/",
+        "state": "unchanged",
+        "oldSource": "src/pages/zoom/index.mdx",
+        "newSource": "src/pages/zoom/index.mdx"
+      },
+      "en": {
+        "path": "/en/zoom/",
+        "state": "modified",
+        "oldSource": "src/pages/en/zoom/index.mdx",
+        "newSource": "src/pages/en/zoom/index.mdx"
+      }
+    },
+    {
+      "key": "/zoom/license/",
+      "title": "Zoomの追加ライセンス（大規模ミーティング）",
+      "file": "pages/zoom__license.md",
+      "ja": {
+        "path": "/zoom/license/",
+        "state": "unchanged",
+        "oldSource": "src/pages/zoom/license.mdx",
+        "newSource": "src/pages/zoom/license.mdx"
+      },
+      "en": {
+        "path": "/en/zoom/license/",
+        "state": "modified",
+        "oldSource": "src/pages/en/zoom/license.mdx",
+        "newSource": "src/pages/en/zoom/license.mdx"
+      }
+    }
+  ],
+  "sharedContent": [],
+  "chrome": [],
+  "assets": {
+    "added": [
+      "_astro/access-trouble.CM0eTv83_1iYxfS.webp",
+      "_astro/alt_add_method.DLqLr-gR.png",
+      "_astro/alt_add_method.DLqLr-gR_Z1Wuwh9.webp",
+      "_astro/alt_add_method_en.CsMx7pYR.png",
+      "_astro/alt_add_method_en.CsMx7pYR_1KxtN5.webp",
+      "_astro/alt_add_method_window.D3HH6XU0.png",
+      "_astro/alt_add_method_window.D3HH6XU0_10hMxM.webp",
+      "_astro/alt_add_method_window_en.DcgFCyLC.png",
+      "_astro/alt_add_method_window_en.DcgFCyLC_WAFoJ.webp",
+      "_astro/broadcast-settings.N5JSbXjE_1J9A7x.webp",
+      "_astro/create-channel.drawio.D_frD2W1_qRSyj.webp",
+      "_astro/create-live-start.drawio.B62JJT5q_Z1P06Tq.webp",
+      "_astro/creating-form.ytYJIq73_5iHkr.webp",
+      "_astro/editing-form.bHJO2VH-_ZNiqib.webp",
+      "_astro/editing-question-photo-result.D_j5DtYa_2lBpaI.webp",
+      "_astro/editing-question-photo.BajhEqeM_ZO3ANy.webp",
+      "_astro/editing-question-setting.BGrRrf5__nbikY.webp",
+      "_astro/editing-question.DTa964wy_mlvzN.webp",
+      "_astro/form-result.Do9FC6zg_ZO8BSe.webp",
+      "_astro/form-setting-answer.DAJ68Ybq_1btVnT.webp",
+      "_astro/form-setting-display.BvHb7nH3_2k0bVP.webp",
+      "_astro/form-setting-test.DVhJo9mU_ZB5dG2.webp",
+      "_astro/linking-spreadsheet.CwRC-BUF_1wJojY.webp",
+      "_astro/live-age.drawio.DubsJxg9_23UyUK.webp",
+      "_astro/live-chat.drawio.DYTaG-_U_ZcUMrt.webp",
+      "_astro/live-end.drawio.qiL-yGHt_dQiYd.webp",
+      "_astro/live-name.drawio.BT44Vcxs_m0UiV.webp",
+      "_astro/live-public.drawio.CvBWQVYV_hP1DL.webp",
+      "_astro/live-share-url.drawio.Dtg7PfDX_ZLXDaq.webp",
+      "_astro/live-share.drawio.C2v-4sRC_WABXr.webp",
+      "_astro/live-start.drawio.DX-Zufzn_Z2bOEFw.webp",
+      "_astro/live-studio.drawio.B52wzyJq_14AhDf.webp",
+      "_astro/live-wait.zE9jA1dn_yKYPQ.webp",
+      "_astro/live.drawio.BvGd-BWe_Z1tax9d.webp",
+      "_astro/name_security_key.C2c49BIE_8p4zi.webp",
+      "_astro/name_security_key.eRUD62hE_Z1b2OXJ.webp",
+      "_astro/passkey_prompt.K2cNyKxi_ZxMoqk.webp",
+      "_astro/passkey_prompt_en.mfvPNHKo_2e1Eq.webp",
+      "_astro/passkey_setup.D25kqkQU_2edBUz.webp",
+      "_astro/passkey_setup.z8VymCI0_ZuzxVm.webp",
+      "_astro/publishing-form.D4QnDJvO_Z2bzdMo.webp",
+      "_astro/request-live-streaming.7KHejMC__mhld1.webp",
+      "_astro/sample.CBPIXk_6_Z22xix1.webp",
+      "_astro/sample.Dh9MAd4u_1X1uga.webp",
+      "_astro/setting_label.BSMi9yh5_Z1sInKQ.webp",
+      "_astro/setting_label.CRt2B54r_Z1WkE3G.webp",
+      "_astro/sharing-form-link.BFj8K7uJ_Z1v2aYO.webp",
+      "_astro/sharing-form.R2wFbWHK_Z3XhMg.webp",
+      "_astro/signin_other_method.BFK-2BFt.png",
+      "_astro/signin_other_method.BFK-2BFt_1b9jqE.webp",
+      "_astro/signin_security_key.Ca1WaFwF.png",
+      "_astro/signin_security_key.Ca1WaFwF_2jmkHU.webp",
+      "_astro/start-live-streaming.DArAPHep_Z1rn7Yc.webp",
+      "_astro/start-live.drawio.C5C8cXTH_Z4Y5NG.webp",
+      "_astro/text_field.2mUP1SIG_27akFH.webp",
+      "_astro/text_field.BKkdHklP_Z1iWpqE.webp",
+      "_astro/verify-account-0.drawio.DRwoyCUA_ZQIIdc.webp",
+      "_astro/verify-account-1.drawio.FTBddj1D_qvSEk.webp",
+      "_astro/verify-account-2.drawio.BsdgboEa_ZwGl4x.webp",
+      "_astro/verify-account-3.drawio.wYYC7mRV_Z1tpYir.webp",
+      "_astro/verify-account-4.drawio.D_GKFJrc_I3INF.webp",
+      "_astro/youtube-share-url.CCuFXvzA_HTfkd.webp",
+      "_astro/youtube-stream-keys.BinS6CxH_1FCjU8.webp",
+      "_astro/zoom-allow-livestreaming.BHDG9fZl_EHX98.webp",
+      "_astro/zoom-custom-streaming.drawio.C_YYK9b2_1rGbCi.webp",
+      "_astro/zoom-settings.DYMTvLVE_2n6Gk0.webp"
+    ],
+    "removed": [
+      "_astro/add_signin_method.BU1PB0BP_Z1JiHdt.webp",
+      "_astro/alt_add_method.B222c_U1_ZCriUb.webp",
+      "_astro/alt_add_method.CDGBbnai.png",
+      "_astro/alt_add_method.CDGBbnai_Z24rF3J.webp",
+      "_astro/alt_add_method_window.QsIBkaeK_jmzCW.webp",
+      "_astro/alt_add_method_window.RifrpAWV.png",
+      "_astro/alt_add_method_window.RifrpAWV_ZKDvJD.webp",
+      "_astro/change_default_signin_method.DrZv-bv9_2vcbYe.webp",
+      "_astro/delete_method.DlJ_cd7F_16PWpU.webp",
+      "_astro/method_change.CyPz-k4F_Z1etjCY.webp",
+      "_astro/name_security_key.BsFbdF15_Z25alX1.webp",
+      "_astro/name_security_key.wqQiREJF_C46bl.webp",
+      "_astro/passkey_prompt.BLHxHf5y_Z1M7FGP.webp",
+      "_astro/passkey_setup.C0LOajtO_1rK258.webp",
+      "_astro/prepare_key.CWof55UG_35cFu.webp",
+      "_astro/select_connection_method.CgDiohNR_ZDgyY1.webp",
+      "_astro/select_security_key.bGUmKk7x_Z27Sof0.webp",
+      "_astro/signin_other_method.ycsqJuXh_1YSsbF.webp",
+      "_astro/signin_security_key.Bc2q0Lpc_1dTpwx.webp"
+    ]
+  },
+  "files": [],
+  "redirects": []
+}
