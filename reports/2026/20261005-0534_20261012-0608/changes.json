@@ -1,0 +1,371 @@
+{
+  "format": 2,
+  "kind": "weekly",
+  "since": "2026-10-05T05:34:05+09:00",
+  "until": "2026-10-12T06:08:57+09:00",
+  "repo": "utelecon/utelecon.github.io",
+  "old": {
+    "sha": "41648565847ebc9bd14160a8b1090829b1803beb",
+    "committedAt": "2026-10-01T17:11:17+09:00",
+    "node": "v24.21.0"
+  },
+  "new": {
+    "sha": "7863cea4b1fcef7da4d36022e61aefeab8a144e5",
+    "committedAt": "2026-10-09T15:55:57+09:00",
+    "node": "v24.21.0"
+  },
+  "toolSha": "5d93afa0d50ecfc8720e0b9ff6fa8933f6103890",
+  "sharedContentMinPages": 5,
+  "generatedAt": "2026-10-11T21:14:16.239Z",
+  "warnings": [],
+  "counts": {
+    "pages": 15,
+    "sharedContent": 2,
+    "chrome": 0,
+    "assets": 51,
+    "files": 0,
+    "redirects": 0
+  },
+  "pages": [
+    {
+      "key": "/articles/cosense/",
+      "title": "Cosenseの基本的な使い方",
+      "file": "pages/articles__cosense.md",
+      "ja": {
+        "path": "/articles/cosense/",
+        "state": "modified",
+        "oldSource": "src/pages/articles/cosense/index.md",
+        "newSource": "src/pages/articles/cosense/index.md"
+      },
+      "en": {
+        "path": "/en/articles/cosense/",
+        "state": "modified",
+        "oldSource": "src/pages/en/articles/cosense/index.md",
+        "newSource": "src/pages/en/articles/cosense/index.md"
+      }
+    },
+    {
+      "key": "/articles/goodnotes-writing/",
+      "title": "GoodNotes 5 で板書をする",
+      "file": "pages/articles__goodnotes-writing.md",
+      "ja": {
+        "path": "/articles/goodnotes-writing/",
+        "state": "modified",
+        "oldSource": "src/pages/articles/goodnotes-writing/index.mdx",
+        "newSource": "src/pages/articles/goodnotes-writing/index.mdx"
+      },
+      "en": {
+        "path": "/en/articles/goodnotes-writing/",
+        "state": "modified",
+        "oldSource": "src/pages/en/articles/goodnotes-writing/index.mdx",
+        "newSource": "src/pages/en/articles/goodnotes-writing/index.mdx"
+      }
+    },
+    {
+      "key": "/articles/google-form/",
+      "title": "Googleフォームで小テストやアンケートを実施する",
+      "file": "pages/articles__google-form.md",
+      "ja": {
+        "path": "/articles/google-form/",
+        "state": "modified",
+        "oldSource": "src/pages/articles/google-form/index.md",
+        "newSource": "src/pages/articles/google-form/index.md"
+      },
+      "en": {
+        "path": "/en/articles/google-form/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/articles/google-form/index.md",
+        "newSource": "src/pages/en/articles/google-form/index.md"
+      }
+    },
+    {
+      "key": "/articles/onenote-whiteboard/",
+      "title": "OneNoteで板書する",
+      "file": "pages/articles__onenote-whiteboard.md",
+      "ja": {
+        "path": "/articles/onenote-whiteboard/",
+        "state": "modified",
+        "oldSource": "src/pages/articles/onenote-whiteboard/index.mdx",
+        "newSource": "src/pages/articles/onenote-whiteboard/index.mdx"
+      },
+      "en": {
+        "path": "/en/articles/onenote-whiteboard/",
+        "state": "modified",
+        "oldSource": "src/pages/en/articles/onenote-whiteboard/index.mdx",
+        "newSource": "src/pages/en/articles/onenote-whiteboard/index.mdx"
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/",
+      "title": "UTokyo Azure",
+      "file": "pages/research_computing__utokyo_azure.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/",
+        "state": "modified",
+        "oldSource": "src/pages/research_computing/utokyo_azure/index.mdx",
+        "newSource": "src/pages/research_computing/utokyo_azure/index.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/research_computing/utokyo_azure/index.mdx",
+        "newSource": "src/pages/en/research_computing/utokyo_azure/index.mdx"
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/faq/",
+      "title": "FAQ：UTokyo Azure",
+      "file": "pages/research_computing__utokyo_azure__faq.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/faq/",
+        "state": "modified",
+        "oldSource": "src/pages/research_computing/utokyo_azure/faq/index.mdx",
+        "newSource": "src/pages/research_computing/utokyo_azure/faq/index.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/faq/",
+        "state": "modified",
+        "oldSource": "src/pages/en/research_computing/utokyo_azure/faq/index.mdx",
+        "newSource": "src/pages/en/research_computing/utokyo_azure/faq/index.mdx"
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/faq/subscription/",
+      "title": "サブスクリプションとは：UTokyo Azure",
+      "file": "pages/research_computing__utokyo_azure__faq__subscription.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/faq/subscription/",
+        "state": "modified",
+        "oldSource": "src/pages/research_computing/utokyo_azure/faq/subscription.mdx",
+        "newSource": "src/pages/research_computing/utokyo_azure/faq/subscription.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/faq/subscription/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/faq/usage/",
+      "title": "請求の確認方法：UTokyo Azure",
+      "file": "pages/research_computing__utokyo_azure__faq__usage.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/faq/usage/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/research_computing/utokyo_azure/faq/usage.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/faq/usage/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/research_computing/utokyo_azure/group/",
+      "title": "複数人グループでの利用や権限設定",
+      "file": "pages/research_computing__utokyo_azure__group.md",
+      "ja": {
+        "path": "/research_computing/utokyo_azure/group/",
+        "state": "modified",
+        "oldSource": "src/pages/research_computing/utokyo_azure/group/index.mdx",
+        "newSource": "src/pages/research_computing/utokyo_azure/group/index.mdx"
+      },
+      "en": {
+        "path": "/en/research_computing/utokyo_azure/group/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/research_computing/utokyo_azure/group/index.mdx",
+        "newSource": "src/pages/en/research_computing/utokyo_azure/group/index.mdx"
+      }
+    },
+    {
+      "key": "/sitemap/",
+      "title": "サイトマップ",
+      "file": "pages/sitemap.md",
+      "ja": {
+        "path": "/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/sitemap/index.mdx",
+        "newSource": "src/pages/sitemap/index.mdx"
+      },
+      "en": {
+        "path": "/en/sitemap/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/sitemap/index.mdx",
+        "newSource": "src/pages/en/sitemap/index.mdx"
+      }
+    },
+    {
+      "key": "/support/chat/",
+      "title": "チャットで相談する",
+      "file": "pages/support__chat.md",
+      "ja": {
+        "path": "/support/chat/",
+        "state": "modified",
+        "oldSource": "src/pages/support/chat.md",
+        "newSource": "src/pages/support/chat.md"
+      },
+      "en": {
+        "path": "/en/support/chat/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/support/chat.md",
+        "newSource": "src/pages/en/support/chat.md"
+      }
+    },
+    {
+      "key": "/support/email-form/",
+      "title": "メールフォームで相談する",
+      "file": "pages/support__email-form.md",
+      "ja": {
+        "path": "/support/email-form/",
+        "state": "modified",
+        "oldSource": "src/pages/support/email-form.md",
+        "newSource": "src/pages/support/email-form.md"
+      },
+      "en": {
+        "path": "/en/support/email-form/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/support/email-form.md",
+        "newSource": "src/pages/en/support/email-form.md"
+      }
+    },
+    {
+      "key": "/support/on-site/",
+      "title": "対面で相談する",
+      "file": "pages/support__on-site.md",
+      "ja": {
+        "path": "/support/on-site/",
+        "state": "modified",
+        "oldSource": "src/pages/support/on-site.md",
+        "newSource": "src/pages/support/on-site.md"
+      },
+      "en": {
+        "path": "/en/support/on-site/",
+        "state": "modified",
+        "oldSource": "src/pages/en/support/on-site.md",
+        "newSource": "src/pages/en/support/on-site.md"
+      }
+    },
+    {
+      "key": "/utokyo_wifi/android/",
+      "title": "AndroidでUTokyo Wi-Fiを利用する",
+      "file": "pages/utokyo_wifi__android.md",
+      "ja": {
+        "path": "/utokyo_wifi/android/",
+        "state": "modified",
+        "oldSource": "src/pages/utokyo_wifi/android.mdx",
+        "newSource": "src/pages/utokyo_wifi/android.mdx"
+      },
+      "en": {
+        "path": "/en/utokyo_wifi/android/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/utokyo_wifi/android.mdx",
+        "newSource": "src/pages/en/utokyo_wifi/android.mdx"
+      }
+    },
+    {
+      "key": "/zoom/usage/participants/",
+      "title": "Zoom 参加者一覧表示",
+      "file": "pages/zoom__usage__participants.md",
+      "ja": {
+        "path": "/zoom/usage/participants/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/usage/participants/index.md",
+        "newSource": "src/pages/zoom/usage/participants/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/usage/participants/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    }
+  ],
+  "sharedContent": [
+    {
+      "file": "common/content-1.md",
+      "paths": [
+        "/articles/copyright/",
+        "/articles/copyright/article35-and-educational-institutions/",
+        "/articles/copyright/basic/",
+        "/articles/copyright/copyright-free-resources/",
+        "/articles/copyright/educational-use-examples/",
+        "/articles/copyright/public-domain-creative-commons-license/",
+        "/articles/copyright/sartras-member-organizations/",
+        "/articles/copyright/sartras/"
+      ]
+    },
+    {
+      "file": "common/content-2.md",
+      "paths": [
+        "/research_computing/utokyo_azure/ai/aml/",
+        "/research_computing/utokyo_azure/ai/azureai/",
+        "/research_computing/utokyo_azure/ai/openai/",
+        "/research_computing/utokyo_azure/storage/",
+        "/research_computing/utokyo_azure/virtualmachine/"
+      ]
+    }
+  ],
+  "chrome": [],
+  "assets": {
+    "added": [
+      "_astro/01_usage1.D8b4jfwy_1lrBvS.webp",
+      "_astro/02_subscription.DpxekXHF_1BiNrP.webp",
+      "_astro/02_usage2.EVq0Ob7s_Z1BLvEK.webp",
+      "_astro/03_usage3.CJQjzY-O_14yGrA.webp",
+      "_astro/android-createprofile.BkSUQbd-_mAUyv.webp",
+      "_astro/host-tool-details.C1ltUkrd_Z1NLzxW.webp",
+      "_astro/host-tool.BRllRAna_tUC2J.webp",
+      "_astro/options.DfHx9fVb_abF6c.webp",
+      "_astro/panel-details.CMUVVkU__Z1FWqTr.webp",
+      "_astro/panel.CFS0HGnt_a3PeG.webp",
+      "_astro/pic01.DLSM_PIT_Z1YRBnO.webp",
+      "_astro/pic06.CT5F4GrN_2boqxG.webp",
+      "_astro/pic08.Cs9mUXKo_Z2d4QgP.webp",
+      "_astro/pic37.CX76wY7v_Z1zvnRu.webp",
+      "_astro/pic37.DsxKiG_G_1KJouM.webp",
+      "_astro/pic38.C9dOWbNz_Z1WL7r7.webp",
+      "_astro/pic38.Cya-Qplk_4E3Tv.webp",
+      "_astro/pic39.B1MIU3Wb_Z1YXf3u.webp",
+      "_astro/pic39.B2uEJxiS_Z1I3btk.webp",
+      "_astro/pic40.DGIKtW6h_2ndmFT.webp",
+      "_astro/pic40.VeZbiYds_Z1IjG3n.webp",
+      "_astro/pic41.B4MigC9w_OYD4w.webp",
+      "_astro/pic41.D_8W4ELM_Z1OOsou.webp",
+      "_astro/pic42.Bjed66Hc_1fUcz3.webp",
+      "_astro/pic43.BiSvkezI_ZdzVd0.webp",
+      "_astro/pic43._oy75Thd_XRRy5.webp",
+      "_astro/pic44.BQ9ad6tF_Z1d8iBW.webp",
+      "_astro/pic44.BiIf-YUU_ZPgnj1.webp",
+      "_astro/pic52.BtI7lbWE_1xVwes.webp",
+      "_astro/pic52.CyqBfzDc_VO8M8.webp",
+      "_astro/pic53.B5dn0fo7_25BRq.webp",
+      "_astro/pic53.DqL9WrH2_22rsgo.webp",
+      "_astro/pic54.Bensb7kn_1QuP3e.webp",
+      "_astro/pic54.CsRMR7Dp_Z1VMQS5.webp",
+      "_astro/pic56.BFo89GZt_2vP6KC.webp",
+      "_astro/pic56.DwJeU1Rq_Z1ScXpH.webp",
+      "_astro/pic57.7ofajB5s_1bdG1J.webp",
+      "_astro/pic57.D0vngajc_Z1Ok0Dn.webp",
+      "_astro/pic58.ChfWf6oX_S18aa.webp",
+      "_astro/pic58.DclZTGvg_Z27uTBB.webp",
+      "_astro/pic59.B1FiO8lF_JR79d.webp",
+      "_astro/pic59.PYkoYDH1_Z15TsVT.webp",
+      "_astro/pic60.B5u9Trhc_ZLvOcc.webp",
+      "_astro/pic60.DEp_hxvj_2jEIHM.webp"
+    ],
+    "removed": [
+      "_astro/02_subscription.YHLKLMbQ_ZWI13J.webp",
+      "_astro/android-createprofile.ybbuKitl_ZUUJTi.webp",
+      "_astro/options.wK6oE7AM_26L4xg.webp",
+      "_astro/panel.ByCJraPI_Z2tMb47.webp",
+      "_astro/pic01.CDD-5V09_Z2jK2Gy.webp",
+      "_astro/pic06.CT5F4GrN_htGTH.webp",
+      "_astro/pic08.Cs9mUXKo_Z13PG2s.webp"
+    ]
+  },
+  "files": [],
+  "redirects": []
+}
