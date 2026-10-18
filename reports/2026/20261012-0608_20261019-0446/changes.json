@@ -1,0 +1,148 @@
+{
+  "format": 2,
+  "kind": "weekly",
+  "since": "2026-10-12T06:08:57+09:00",
+  "until": "2026-10-19T04:46:50+09:00",
+  "repo": "utelecon/utelecon.github.io",
+  "old": {
+    "sha": "7863cea4b1fcef7da4d36022e61aefeab8a144e5",
+    "committedAt": "2026-10-09T15:55:57+09:00",
+    "node": "v24.21.0"
+  },
+  "new": {
+    "sha": "99dc5c784ad0009e05344f588bf59cb2d43eee8f",
+    "committedAt": "2026-10-14T19:56:44+09:00",
+    "node": "v24.21.0"
+  },
+  "toolSha": "84d29d220b512824ce8a1c3757b8dbe6a43c0bb4",
+  "sharedContentMinPages": 5,
+  "generatedAt": "2026-10-18T19:52:31.361Z",
+  "warnings": [],
+  "counts": {
+    "pages": 3,
+    "sharedContent": 0,
+    "chrome": 0,
+    "assets": 56,
+    "files": 0,
+    "redirects": 0
+  },
+  "pages": [
+    {
+      "key": "/support/chat/",
+      "title": "チャットで相談する",
+      "file": "pages/support__chat.md",
+      "ja": {
+        "path": "/support/chat/",
+        "state": "modified",
+        "oldSource": "src/pages/support/chat.md",
+        "newSource": "src/pages/support/chat.md"
+      },
+      "en": {
+        "path": "/en/support/chat/",
+        "state": "modified",
+        "oldSource": "src/pages/en/support/chat.md",
+        "newSource": "src/pages/en/support/chat.md"
+      }
+    },
+    {
+      "key": "/zoom/usage/screen_sharing/",
+      "title": "画面共有",
+      "file": "pages/zoom__usage__screen_sharing.md",
+      "ja": {
+        "path": "/zoom/usage/screen_sharing/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/usage/screen_sharing/index.md",
+        "newSource": "src/pages/zoom/usage/screen_sharing/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/usage/screen_sharing/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/zoom/usage/screen_sharing/index.md",
+        "newSource": "src/pages/en/zoom/usage/screen_sharing/index.md"
+      }
+    },
+    {
+      "key": "/zoom/usage/screen_sharing/security/",
+      "title": "Zoom 画面共有の許可と制限",
+      "file": "pages/zoom__usage__screen_sharing__security.md",
+      "ja": {
+        "path": "/zoom/usage/screen_sharing/security/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/usage/screen_sharing/security/index.md",
+        "newSource": "src/pages/zoom/usage/screen_sharing/security/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/usage/screen_sharing/security/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/zoom/usage/screen_sharing/security/index.md",
+        "newSource": "src/pages/en/zoom/usage/screen_sharing/security/index.md"
+      }
+    }
+  ],
+  "sharedContent": [],
+  "chrome": [],
+  "assets": {
+    "added": [
+      "_astro/10_dualwindow.Drkaqcpo_Z1eMmkz.webp",
+      "_astro/11_comment.nd4QpjxW_ZPCPjo.webp",
+      "_astro/12_text.CBz6fxLU_ZVo9K0.webp",
+      "_astro/13_draw.BJsXma5i_1orv6O.webp",
+      "_astro/14_draw.BoKhtd5C_15YUvK.webp",
+      "_astro/15_stamp.BTa5Opxf_Z1y0Ltf.webp",
+      "_astro/16_stamp.DfHJCgr0_29gFRH.webp",
+      "_astro/17_spotlight.vbqIIIWh_Z7vy9A.webp",
+      "_astro/18_format.Cr92gady_ZIosCN.webp",
+      "_astro/19_erace.CxkfZQAu_cVapl.webp",
+      "_astro/1_menu.0WZA67qI_2oT3cx.webp",
+      "_astro/1_sharepermission.BLv20dXO_1uQ7JV.webp",
+      "_astro/20_shareformat.BpLFw16D_Z1INygc.webp",
+      "_astro/21_shareformat.B8NkuhVk_Z1qUri8.webp",
+      "_astro/22_viewer.Ca4YEz5__2dfgyk.webp",
+      "_astro/2_setting.B6mxILrP_Z1myN2U.webp",
+      "_astro/2_share1.DzBIvBXV_ZlUvta.webp",
+      "_astro/3_setting.CufYgpI0_Z1DeTtu.webp",
+      "_astro/3_share.eyDHv4sK_Zwwir1.webp",
+      "_astro/4_setting.BQUKVOXr_Z1QW73F.webp",
+      "_astro/4_sharestop.CURVqocU_247OQc.webp",
+      "_astro/5_share.65t9Frj__aTvKP.webp",
+      "_astro/5_sharechange.YwZzLmQj_Z17DOfI.webp",
+      "_astro/6_sharechange.CpUPRYig_MLPke.webp",
+      "_astro/6_shosai.CCP20Z7g_Z28TagE.webp",
+      "_astro/7_shosai.DlOywmg6_mfj4p.webp",
+      "_astro/8_shareoption.Be2uKfJ7_Z2danVf.webp",
+      "_astro/9_shareoption.gqJ81u6q_jPIUQ.webp"
+    ],
+    "removed": [
+      "_astro/10_annotationtools_text.V1flkNgi_1GW7da.webp",
+      "_astro/11_annotationtools_draw.BG3rvWfY_Z2anOGQ.webp",
+      "_astro/12_annotationtools_stamp.Bd8TlL4p_Z1KNAlS.webp",
+      "_astro/13_annotationtools_spotlight.C4ld-4cz_Z1HbTtT.webp",
+      "_astro/14_annotationtools_format.iZWZ52MK_Ymsp7.webp",
+      "_astro/15_annotationtools_clear.CgokGHps_14yiEd.webp",
+      "_astro/16_stopshare.sfJA98S6_2q1o61.webp",
+      "_astro/17_participantsmenu.FZqnvzLV_Z1J84cO.webp",
+      "_astro/18_sidebysidemode.C_1i5cuM_1p5aem.webp",
+      "_astro/19_advancedshareoptions1.dGaL8sP6_Z1avAwx.webp",
+      "_astro/1_menu.spi3SpMs_enUz6.webp",
+      "_astro/20_advancedshareoptions2.CM3DZo8y_Z1pQdxo.webp",
+      "_astro/21_dualmonitor.C-8LoqhA_akGQM.webp",
+      "_astro/22_security.WTAO-GZb_2rKGIM.webp",
+      "_astro/23_details.BYjWUUWL_ZtB8US.webp",
+      "_astro/2_basic1._iBaQz6k_Z1KxNY7.webp",
+      "_astro/3_basic2.D2bdGWys_Z2pB6xM.webp",
+      "_astro/4_basic3.OhVtGNfH_VxJWq.webp",
+      "_astro/7_sharescreenmenu.DN52aC4x_Z24rJyK.webp",
+      "_astro/8_sharescreenmenu2.CJDam9eX_W76KQ.webp",
+      "_astro/9_annotationtools.CG2TLmZm_Zv4shL.webp",
+      "_astro/share_all.BOr9pMjL_Z1gJX0g.webp",
+      "_astro/share_all_default1.DYMMPErJ_8xJFC.webp",
+      "_astro/share_all_default2.DVjVGoAd_Fv38M.webp",
+      "_astro/share_all_default3.D1XblEuN_Z2x4llr.webp",
+      "_astro/share_takeover1.fLSYzpm9_E461G.webp",
+      "_astro/share_takeover2.BHW9e7wR_1zHDuF.webp",
+      "_astro/share_takeover_default.DrxiCvcF_wgWwf.webp"
+    ]
+  },
+  "files": [],
+  "redirects": []
+}
