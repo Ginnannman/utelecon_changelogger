@@ -1,0 +1,273 @@
+{
+  "format": 2,
+  "kind": "weekly",
+  "since": "2026-10-26T05:04:51+09:00",
+  "until": "2026-11-02T06:25:39+09:00",
+  "repo": "utelecon/utelecon.github.io",
+  "old": {
+    "sha": "b8d968c4567728c2d7eea38f166f9c4fef58af2b",
+    "committedAt": "2026-10-23T12:21:43+09:00",
+    "node": "v24.22.1"
+  },
+  "new": {
+    "sha": "1cdef038ec713cd321a0ef53b8add1c87c637a73",
+    "committedAt": "2026-10-30T10:21:12+09:00",
+    "node": "v24.22.1"
+  },
+  "toolSha": "0bb276afac7aa03dd3047f4c9be5cf827acc061d",
+  "sharedContentMinPages": 5,
+  "generatedAt": "2026-11-01T21:31:02.459Z",
+  "warnings": [],
+  "counts": {
+    "pages": 9,
+    "sharedContent": 2,
+    "chrome": 0,
+    "assets": 50,
+    "files": 0,
+    "redirects": 0
+  },
+  "pages": [
+    {
+      "key": "/",
+      "title": "情報システムの総合案内サイト @ 東京大学",
+      "file": "pages/index.md",
+      "ja": {
+        "path": "/",
+        "state": "modified",
+        "oldSource": "src/pages/index.mdx",
+        "newSource": "src/pages/index.mdx"
+      },
+      "en": {
+        "path": "/en/",
+        "state": "modified",
+        "oldSource": "src/pages/en/index.mdx",
+        "newSource": "src/pages/en/index.mdx"
+      }
+    },
+    {
+      "key": "/eccs/support/",
+      "title": "ECCSの利用に関するサポート",
+      "file": "pages/eccs__support.md",
+      "ja": {
+        "path": "/eccs/support/",
+        "state": "modified",
+        "oldSource": "src/pages/eccs/support/index.mdx",
+        "newSource": "src/pages/eccs/support/index.mdx"
+      },
+      "en": {
+        "path": "/en/eccs/support/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/eccs/support/index.mdx",
+        "newSource": "src/pages/en/eccs/support/index.mdx"
+      }
+    },
+    {
+      "key": "/newsletter/archives/",
+      "title": "uteleconメールマガジン バックナンバー",
+      "file": "pages/newsletter__archives.md",
+      "ja": {
+        "path": "/newsletter/archives/",
+        "state": "modified",
+        "oldSource": "src/pages/newsletter/archives/index.mdx",
+        "newSource": "src/pages/newsletter/archives/index.mdx"
+      },
+      "en": {
+        "path": "/en/newsletter/archives/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/newsletter/archives/20261029/",
+      "title": "vol.7",
+      "file": "pages/newsletter__archives__20261029.md",
+      "ja": {
+        "path": "/newsletter/archives/20261029/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/newsletter/archives/20261029/index.md"
+      },
+      "en": {
+        "path": "/en/newsletter/archives/20261029/",
+        "state": "absent",
+        "oldSource": null,
+        "newSource": null
+      }
+    },
+    {
+      "key": "/sitemap/",
+      "title": "サイトマップ",
+      "file": "pages/sitemap.md",
+      "ja": {
+        "path": "/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/sitemap/index.mdx",
+        "newSource": "src/pages/sitemap/index.mdx"
+      },
+      "en": {
+        "path": "/en/sitemap/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/sitemap/index.mdx",
+        "newSource": "src/pages/en/sitemap/index.mdx"
+      }
+    },
+    {
+      "key": "/support/",
+      "title": "サポート窓口",
+      "file": "pages/support.md",
+      "ja": {
+        "path": "/support/",
+        "state": "modified",
+        "oldSource": "src/pages/support/index.mdx",
+        "newSource": "src/pages/support/index.mdx"
+      },
+      "en": {
+        "path": "/en/support/",
+        "state": "modified",
+        "oldSource": "src/pages/en/support/index.mdx",
+        "newSource": "src/pages/en/support/index.mdx"
+      }
+    },
+    {
+      "key": "/zoom/create_room/auth/",
+      "title": "Zoomミーティングで参加時に認証を求める",
+      "file": "pages/zoom__create_room__auth.md",
+      "ja": {
+        "path": "/zoom/create_room/auth/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/create_room/auth/index.md",
+        "newSource": "src/pages/zoom/create_room/auth/index.mdx"
+      },
+      "en": {
+        "path": "/en/zoom/create_room/auth/",
+        "state": "modified",
+        "oldSource": "src/pages/en/zoom/create_room/auth/index.md",
+        "newSource": "src/pages/en/zoom/create_room/auth/index.mdx"
+      }
+    },
+    {
+      "key": "/zoom/create_room/waiting_room/",
+      "title": "Zoomミーティングで待機室を設定する",
+      "file": "pages/zoom__create_room__waiting_room.md",
+      "ja": {
+        "path": "/zoom/create_room/waiting_room/",
+        "state": "unchanged",
+        "oldSource": "src/pages/zoom/create_room/waiting_room/index.md",
+        "newSource": "src/pages/zoom/create_room/waiting_room/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/create_room/waiting_room/",
+        "state": "modified",
+        "oldSource": "src/pages/en/zoom/create_room/waiting_room/index.md",
+        "newSource": "src/pages/en/zoom/create_room/waiting_room/index.md"
+      }
+    },
+    {
+      "key": "/zoom/join/",
+      "title": "Zoom ミーティングに参加する",
+      "file": "pages/zoom__join.md",
+      "ja": {
+        "path": "/zoom/join/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/join/index.md",
+        "newSource": "src/pages/zoom/join/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/join/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/zoom/join/index.md",
+        "newSource": "src/pages/en/zoom/join/index.md"
+      }
+    }
+  ],
+  "sharedContent": [
+    {
+      "file": "common/content-1.md",
+      "paths": [
+        "/en/utokyo_wifi/",
+        "/en/utokyo_wifi/android/",
+        "/en/utokyo_wifi/certificate_renewal/",
+        "/en/utokyo_wifi/ios/",
+        "/en/utokyo_wifi/lodge/",
+        "/en/utokyo_wifi/macos/",
+        "/en/utokyo_wifi/trouble_shooting/",
+        "/en/utokyo_wifi/windows/"
+      ]
+    },
+    {
+      "file": "common/content-2.md",
+      "paths": [
+        "/utokyo_wifi/",
+        "/utokyo_wifi/android-cat/",
+        "/utokyo_wifi/android/",
+        "/utokyo_wifi/certificate_renewal/",
+        "/utokyo_wifi/ios/",
+        "/utokyo_wifi/lodge/",
+        "/utokyo_wifi/macos/",
+        "/utokyo_wifi/trouble_shooting/",
+        "/utokyo_wifi/windows/",
+        "/utokyo_wifi/wired_lan/"
+      ]
+    }
+  ],
+  "chrome": [],
+  "assets": {
+    "added": [
+      "_astro/GoodPractice.CEKXGcoY.js",
+      "_astro/client.CCzkHhPY.js",
+      "_astro/index.B28oNxVQ.js",
+      "_astro/zoom_auth_meeting_edit.DswwAtNB_Z1dDYCB.webp",
+      "_astro/zoom_auth_meeting_edit.jtOh-ni7_Z2ddmQm.webp",
+      "_astro/zoom_auth_meeting_page.BCUJdPTU_1OFt8z.webp",
+      "_astro/zoom_auth_meeting_page.CE98CHlk_Z1KrucW.webp",
+      "_astro/zoom_auth_meeting_security.CQ40aELO_Z1WHwG1.webp",
+      "_astro/zoom_auth_meeting_security.DI4e6AVL_gIAR8.webp",
+      "_astro/zoom_auth_settings_page.6e1br8a6_Z1lDGNe.webp",
+      "_astro/zoom_auth_settings_page.DPZwW-4P_1mAUcb.webp",
+      "_astro/zoom_auth_settings_univ_account.BUM3wr2G_Z1682rT.webp",
+      "_astro/zoom_auth_settings_univ_account.DBp2rFhc_Z2uHEYm.webp",
+      "_astro/zoom_auth_settings_univ_domain.1-5fPyVC_KapkB.webp",
+      "_astro/zoom_auth_settings_univ_domain.7sixeqmQ_ZI3gR2.webp",
+      "_astro/zoom_join_app.CHTsnZWO_1SjveO.webp",
+      "_astro/zoom_join_app_audio.C24s8Cva_Z1ofkm2.webp",
+      "_astro/zoom_join_app_audio_via_link.BxunbDcD_ZDgNp1.webp",
+      "_astro/zoom_join_app_setup.NU8zDx6F_Z2eGSvd.webp",
+      "_astro/zoom_join_browser.CCdEEKGA_Z12NOwb.webp",
+      "_astro/zoom_join_browser.setup.C9Fyb2GY_Z14ryFJ.webp",
+      "_astro/zoom_join_browser.signin.DQ9I1fN2_Z1havP4.webp",
+      "_astro/zoom_join_host.Dr7qyweM_Z1x4Bp8.webp",
+      "_astro/zoom_join_signin_not.CImdzOB8_1sFz83.webp",
+      "_astro/zoom_join_signin_other.B5YrE1y2_1A7g1v.webp"
+    ],
+    "removed": [
+      "_astro/GoodPractice.BVPtzU7g.js",
+      "_astro/client.D2WMwoKK.js",
+      "_astro/index.RH_Wq4ov.js",
+      "_astro/meeting_1.BCwtash0_Z21rm3b.webp",
+      "_astro/meeting_1.BmB5x3cg_Z2gjPXw.webp",
+      "_astro/meeting_2.B022nw2W_f3Sfs.webp",
+      "_astro/meeting_2.DEV6uZcO_Z1GdEYb.webp",
+      "_astro/meeting_3.Blm5jgIh_ZieetP.webp",
+      "_astro/meeting_3.BzL4XAjU_Z2huFdV.webp",
+      "_astro/setting_1.CTPwZ0Gh_Z27dNr2.webp",
+      "_astro/setting_2.D9TgA_Y7_10QY7Q.webp",
+      "_astro/setting_2.DMgu7iTY_ZbvrEF.webp",
+      "_astro/setting_3.D9cfs4xn_DanQG.webp",
+      "_astro/setting_3.K8cMDu8L_Ekrvj.webp",
+      "_astro/zoom_join_app.BhaTM5Ng_Z2bp5DR.webp",
+      "_astro/zoom_join_app_audio.Bdjk0pww_Zwxxad.webp",
+      "_astro/zoom_join_app_setup.CTAFMokR_1E8b5f.webp",
+      "_astro/zoom_join_app_signin.CE5_dXZs_cQo2f.webp",
+      "_astro/zoom_join_browser.Cs-GRPkx_1AeET3.webp",
+      "_astro/zoom_join_browser.setup.Di7jHyd3_25zxXT.webp",
+      "_astro/zoom_join_browser.signin.DzoB2WjC_c8Dmk.webp",
+      "_astro/zoom_join_browser_audio_setup._WUrnt5K_qTntv.webp",
+      "_astro/zoom_join_host.BYZ2If_e_sFJBx.webp",
+      "_astro/zoom_join_page_open.Cw6NnFz3_ZoBvgz.webp",
+      "_astro/zoom_join_signin.Bra2gx4T_ZHpvV.webp"
+    ]
+  },
+  "files": [],
+  "redirects": []
+}
