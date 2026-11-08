@@ -1,0 +1,129 @@
+{
+  "format": 2,
+  "kind": "weekly",
+  "since": "2026-11-02T06:25:39+09:00",
+  "until": "2026-11-09T06:25:31+09:00",
+  "repo": "utelecon/utelecon.github.io",
+  "old": {
+    "sha": "1cdef038ec713cd321a0ef53b8add1c87c637a73",
+    "committedAt": "2026-10-30T10:21:12+09:00",
+    "node": "v24.22.2"
+  },
+  "new": {
+    "sha": "045708c99ef240e226afdfc92c0c58f30f4133d6",
+    "committedAt": "2026-11-07T09:58:14+09:00",
+    "node": "v24.22.2"
+  },
+  "toolSha": "3e6e10caa68190ce35e064c3bcac64e316c64c7f",
+  "sharedContentMinPages": 5,
+  "generatedAt": "2026-11-08T21:30:49.393Z",
+  "warnings": [],
+  "counts": {
+    "pages": 3,
+    "sharedContent": 0,
+    "chrome": 0,
+    "assets": 37,
+    "files": 0,
+    "redirects": 0
+  },
+  "pages": [
+    {
+      "key": "/sitemap/",
+      "title": "サイトマップ",
+      "file": "pages/sitemap.md",
+      "ja": {
+        "path": "/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/sitemap/index.mdx",
+        "newSource": "src/pages/sitemap/index.mdx"
+      },
+      "en": {
+        "path": "/en/sitemap/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/sitemap/index.mdx",
+        "newSource": "src/pages/en/sitemap/index.mdx"
+      }
+    },
+    {
+      "key": "/zoom/create_room/date_and_time/",
+      "title": "Zoom開催日時の詳細な設定",
+      "file": "pages/zoom__create_room__date_and_time.md",
+      "ja": {
+        "path": "/zoom/create_room/date_and_time/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/create_room/date_and_time/index.md",
+        "newSource": "src/pages/zoom/create_room/date_and_time/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/create_room/date_and_time/",
+        "state": "modified",
+        "oldSource": "src/pages/en/zoom/create_room/date_and_time/index.mdx",
+        "newSource": "src/pages/en/zoom/create_room/date_and_time/index.mdx"
+      }
+    },
+    {
+      "key": "/zoom/join/",
+      "title": "Zoom ミーティングに参加する",
+      "file": "pages/zoom__join.md",
+      "ja": {
+        "path": "/zoom/join/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/join/index.md",
+        "newSource": "src/pages/zoom/join/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/join/",
+        "state": "modified",
+        "oldSource": "src/pages/en/zoom/join/index.md",
+        "newSource": "src/pages/en/zoom/join/index.md"
+      }
+    }
+  ],
+  "sharedContent": [],
+  "chrome": [],
+  "assets": {
+    "added": [
+      "_astro/meeting_schedule.BDJs-D3r_ZWtkfP.webp",
+      "_astro/meeting_schedule.DhQoL-RL_ZHlpws.webp",
+      "_astro/schedule_date.ChMBuX5i_GNqGb.webp",
+      "_astro/schedule_date.Dq8WeHsM_2jR0tL.webp",
+      "_astro/schedule_recurring_check.D51F7v5p_Z1GSwEk.webp",
+      "_astro/schedule_recurring_check.DFsbIlDO_2mpItu.webp",
+      "_astro/schedule_recurring_no_fixed_time.DRyUZi8P_kHWJK.webp",
+      "_astro/schedule_recurring_no_fixed_time.DzDftBND_lyYNV.webp",
+      "_astro/zoom_join_app.Dv7TVtq4_Z1nGUa7.webp",
+      "_astro/zoom_join_app_audio.Du8VCVKW_Z10AwET.webp",
+      "_astro/zoom_join_app_setup.DA5pQQCL_Z1sxleT.webp",
+      "_astro/zoom_join_browser.BRKOBhRV_9cKil.webp",
+      "_astro/zoom_join_browser_audio.B7QwFN8q_Z1bwmXo.webp",
+      "_astro/zoom_join_browser_audio_setup.EiIlHi38_2cyiWQ.webp",
+      "_astro/zoom_join_browser_setup.jjyZKKgf_Z1sUETK.webp",
+      "_astro/zoom_join_browser_signin.Bn5rXJ5j_DmW7b.webp",
+      "_astro/zoom_join_host.Brn7s0ny_Z1Boyjs.webp",
+      "_astro/zoom_join_signin_not.-GT7MZPg_1Acxyf.webp",
+      "_astro/zoom_join_signin_other.DpmursgF_1OXJrL.webp"
+    ],
+    "removed": [
+      "_astro/schedule_date.BQl72PrW_Z2pjysC.webp",
+      "_astro/schedule_date.CvALmdB-_DrhYk.webp",
+      "_astro/schedule_recurring_check.BjwVlxTc_ZXaw0S.webp",
+      "_astro/schedule_recurring_check.CPAthLTx_Z1DoNdb.webp",
+      "_astro/schedule_recurring_no_fixed_time.CBi79UW8_2sIQQF.webp",
+      "_astro/schedule_recurring_no_fixed_time.dUycfDb7_1gnFRd.webp",
+      "_astro/zoom_join_app.Bcc6KJWN_Z1NiEoH.webp",
+      "_astro/zoom_join_app_audio.BNxRVMqD_1xBNYE.webp",
+      "_astro/zoom_join_app_audio_via_link.BxunbDcD_ZDgNp1.webp",
+      "_astro/zoom_join_app_setup.BI6Wx9ci_2l4YT6.webp",
+      "_astro/zoom_join_app_signin.mKBcgAOM_2tKaAG.webp",
+      "_astro/zoom_join_browser.C97zYEqF_1GpiwC.webp",
+      "_astro/zoom_join_browser_audio.CHVT2Ht1_Z1yME8i.webp",
+      "_astro/zoom_join_browser_setup.jwU-TdTu_25kfgY.webp",
+      "_astro/zoom_join_browser_signin.Da_m4gPa_Z1pQzHK.webp",
+      "_astro/zoom_join_host.B-qdQJk3_AD4og.webp",
+      "_astro/zoom_join_page_open.bXcTQlcd_Z26Cq1s.webp",
+      "_astro/zoom_join_signin.DuMJo1o3_1evNj6.webp"
+    ]
+  },
+  "files": [],
+  "redirects": []
+}
