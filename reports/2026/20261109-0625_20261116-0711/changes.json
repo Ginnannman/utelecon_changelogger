@@ -1,0 +1,357 @@
+{
+  "format": 2,
+  "kind": "weekly",
+  "since": "2026-11-09T06:25:31+09:00",
+  "until": "2026-11-16T07:11:29+09:00",
+  "repo": "utelecon/utelecon.github.io",
+  "old": {
+    "sha": "045708c99ef240e226afdfc92c0c58f30f4133d6",
+    "committedAt": "2026-11-07T09:58:14+09:00",
+    "node": "v24.22.2"
+  },
+  "new": {
+    "sha": "03b50cfc4c396ca7f73235e6e92ecb2c4af175ae",
+    "committedAt": "2026-11-15T23:39:15+09:00",
+    "node": "v24.22.2"
+  },
+  "toolSha": "44f0118ab24f5acb07ca154a3c1058400fbe26ae",
+  "sharedContentMinPages": 5,
+  "generatedAt": "2026-11-15T22:17:29.937Z",
+  "warnings": [],
+  "counts": {
+    "pages": 12,
+    "sharedContent": 0,
+    "chrome": 0,
+    "assets": 112,
+    "files": 0,
+    "redirects": 0
+  },
+  "pages": [
+    {
+      "key": "/",
+      "title": "情報システムの総合案内サイト @ 東京大学",
+      "file": "pages/index.md",
+      "ja": {
+        "path": "/",
+        "state": "modified",
+        "oldSource": "src/pages/index.mdx",
+        "newSource": "src/pages/index.mdx"
+      },
+      "en": {
+        "path": "/en/",
+        "state": "modified",
+        "oldSource": "src/pages/en/index.mdx",
+        "newSource": "src/pages/en/index.mdx"
+      }
+    },
+    {
+      "key": "/filesender/",
+      "title": "NII FileSenderの利用",
+      "file": "pages/filesender.md",
+      "ja": {
+        "path": "/filesender/",
+        "state": "modified",
+        "oldSource": "src/pages/filesender/index.mdx",
+        "newSource": "src/pages/filesender/index.mdx"
+      },
+      "en": {
+        "path": "/en/filesender/",
+        "state": "modified",
+        "oldSource": "src/pages/en/filesender/index.mdx",
+        "newSource": "src/pages/en/filesender/index.mdx"
+      }
+    },
+    {
+      "key": "/notice/",
+      "title": "お知らせ",
+      "file": "pages/notice.md",
+      "ja": {
+        "path": "/notice/",
+        "state": "modified",
+        "oldSource": "src/pages/notice/index.mdx",
+        "newSource": "src/pages/notice/index.mdx"
+      },
+      "en": {
+        "path": "/en/notice/",
+        "state": "modified",
+        "oldSource": "src/pages/en/notice/index.mdx",
+        "newSource": "src/pages/en/notice/index.mdx"
+      }
+    },
+    {
+      "key": "/notice/2026/1110-filesender/",
+      "title": "NII FileSenderのメジャーアップデートについて",
+      "file": "pages/notice__2026__1110-filesender.md",
+      "ja": {
+        "path": "/notice/2026/1110-filesender/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/notice/2026/1110-filesender.md"
+      },
+      "en": {
+        "path": "/en/notice/2026/1110-filesender/",
+        "state": "added",
+        "oldSource": null,
+        "newSource": "src/pages/en/notice/2026/1110-filesender.md"
+      }
+    },
+    {
+      "key": "/online/topics/generative-ai/",
+      "title": "生成AI関連情報",
+      "file": "pages/online__topics__generative-ai.md",
+      "ja": {
+        "path": "/online/topics/generative-ai/",
+        "state": "modified",
+        "oldSource": "src/pages/online/topics/generative-ai.md",
+        "newSource": "src/pages/online/topics/generative-ai.md"
+      },
+      "en": {
+        "path": "/en/online/topics/generative-ai/",
+        "state": "modified",
+        "oldSource": "src/pages/en/online/topics/generative-ai.md",
+        "newSource": "src/pages/en/online/topics/generative-ai.md"
+      }
+    },
+    {
+      "key": "/sitemap/",
+      "title": "サイトマップ",
+      "file": "pages/sitemap.md",
+      "ja": {
+        "path": "/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/sitemap/index.mdx",
+        "newSource": "src/pages/sitemap/index.mdx"
+      },
+      "en": {
+        "path": "/en/sitemap/",
+        "state": "modified",
+        "oldSource": "src/pages/en/sitemap/index.mdx",
+        "newSource": "src/pages/en/sitemap/index.mdx"
+      }
+    },
+    {
+      "key": "/staff_members/",
+      "title": "東京大学における情報システムの準備について（職員向け）",
+      "file": "pages/staff_members.md",
+      "ja": {
+        "path": "/staff_members/",
+        "state": "modified",
+        "oldSource": "src/pages/staff_members/index.mdx",
+        "newSource": "src/pages/staff_members/index.mdx"
+      },
+      "en": {
+        "path": "/en/staff_members/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/staff_members/index.mdx",
+        "newSource": "src/pages/en/staff_members/index.mdx"
+      }
+    },
+    {
+      "key": "/utol/lecturers/assignments/",
+      "title": "UTOLで課題機能を利用する（教員・TA向け）",
+      "file": "pages/utol__lecturers__assignments.md",
+      "ja": {
+        "path": "/utol/lecturers/assignments/",
+        "state": "modified",
+        "oldSource": "src/pages/utol/lecturers/assignments/index.mdx",
+        "newSource": "src/pages/utol/lecturers/assignments/index.mdx"
+      },
+      "en": {
+        "path": "/en/utol/lecturers/assignments/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/utol/lecturers/assignments/index.mdx",
+        "newSource": "src/pages/en/utol/lecturers/assignments/index.mdx"
+      }
+    },
+    {
+      "key": "/utol/students/",
+      "title": "UTOLを履修者として利用する",
+      "file": "pages/utol__students.md",
+      "ja": {
+        "path": "/utol/students/",
+        "state": "modified",
+        "oldSource": "src/pages/utol/students/index.mdx",
+        "newSource": "src/pages/utol/students/index.mdx"
+      },
+      "en": {
+        "path": "/en/utol/students/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/utol/students/index.mdx",
+        "newSource": "src/pages/en/utol/students/index.mdx"
+      }
+    },
+    {
+      "key": "/zoom/",
+      "title": "Zoom",
+      "file": "pages/zoom.md",
+      "ja": {
+        "path": "/zoom/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/index.mdx",
+        "newSource": "src/pages/zoom/index.mdx"
+      },
+      "en": {
+        "path": "/en/zoom/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/zoom/index.mdx",
+        "newSource": "src/pages/en/zoom/index.mdx"
+      }
+    },
+    {
+      "key": "/zoom/create_room/registration/",
+      "title": "Zoomミーティングで参加希望者に登録を求める",
+      "file": "pages/zoom__create_room__registration.md",
+      "ja": {
+        "path": "/zoom/create_room/registration/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/create_room/registration/index.md",
+        "newSource": "src/pages/zoom/create_room/registration/index.mdx"
+      },
+      "en": {
+        "path": "/en/zoom/create_room/registration/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/zoom/create_room/registration/index.md",
+        "newSource": "src/pages/en/zoom/create_room/registration/index.md"
+      }
+    },
+    {
+      "key": "/zoom/misc/report/",
+      "title": "Zoomのレポート機能を使って出席を管理する",
+      "file": "pages/zoom__misc__report.md",
+      "ja": {
+        "path": "/zoom/misc/report/",
+        "state": "modified",
+        "oldSource": "src/pages/zoom/misc/report/index.md",
+        "newSource": "src/pages/zoom/misc/report/index.md"
+      },
+      "en": {
+        "path": "/en/zoom/misc/report/",
+        "state": "unchanged",
+        "oldSource": "src/pages/en/zoom/misc/report/index.md",
+        "newSource": "src/pages/en/zoom/misc/report/index.md"
+      }
+    }
+  ],
+  "sharedContent": [],
+  "chrome": [],
+  "assets": {
+    "added": [
+      "_astro/02-settings-02.C0iUgyh2_Z2426Cz.webp",
+      "_astro/04-settings-confirm._HH5tNSE_Z1mRH9S.webp",
+      "_astro/ChangeToRegister.1AY7wWKX_Z1QOYA9.webp",
+      "_astro/DeadlineCheckOn.DOPM6_l3_twE3Y.webp",
+      "_astro/DeadlineChooseMeeting.DByOf8Pb_Z2lEkSA.webp",
+      "_astro/DeadlineEditOption.DdCMwxng_Z1u0HLp.webp",
+      "_astro/DeadlineRegisterTab.Cm0n1dbP_5gbLD.webp",
+      "_astro/DesignBrandingTab.DFoAZ2Kx_CB7CE.webp",
+      "_astro/DesignChooseMeeting.RmjbNz-V_ZyYUR8.webp",
+      "_astro/FormChooseMeeting.CYUzqsVL_Z1xMrB.webp",
+      "_astro/FormEditOption.B8QVmVJs_11cxHL.webp",
+      "_astro/FormQuestionnaireAddOriginal.B6JZmYNA_ZNBHX3.webp",
+      "_astro/FormQuestionnaireOriginalQuestionSave.Cn9z2qIf_Z15GUFj.webp",
+      "_astro/FormQuestionnaireOriginalQuestion_new.CCsn6X_n_XoqRK.webp",
+      "_astro/FormQuestionnaireTab.DZ-TJZPU_yqrrv.webp",
+      "_astro/FormRegisterTab.CAYH9pDW_ivByk.webp",
+      "_astro/ManualAccepted.CifuXW6p_1r6vTI.webp",
+      "_astro/ManualApplied.CZRybmFa_Z1JXmR.webp",
+      "_astro/ManualChooseMeeting.BDeF4FS3_Z1qoP97.webp",
+      "_astro/ManualEditOption.Dj-xzUhG_1AigpF.webp",
+      "_astro/ManualEditSelect.BrC81O3c_1nVMDe.webp",
+      "_astro/ManualManage.Dx6n2iMX_ZCiFWz.webp",
+      "_astro/ManualRegisterTab.VbzPg16d_BdOJi.webp",
+      "_astro/ManualRejected.BrSNQQLB_ZRpuoO.webp",
+      "_astro/ManualRejectedList.BzktqDvf_1yekh7.webp",
+      "_astro/ManualRejectedMessage.4j57y-c5_1pom6C.webp",
+      "_astro/MustRegisterCheckOn.WIkJwbdw_1eOtMj.webp",
+      "_astro/OnlyVerifiedUserCheckOn.BDqe60xM_2exYcf.webp",
+      "_astro/OnlyVerifiedUserDomain.DTu831C-_15aay1.webp",
+      "_astro/RegisterLink.bgK_o3iy_20RPSB.webp",
+      "_astro/RegistrationForm_new.Cq5zfWil_cR0g5.webp",
+      "_astro/RegularChangeToRegister.Dlhl6TW7_Zumajy.webp",
+      "_astro/RegularEditButton.u4hMFfOt_Z1AvEi2.webp",
+      "_astro/RegularWholeMeeting.DWB5ofKS_ZSBlB5.webp",
+      "_astro/ReportExport.2KK4i5W0_FfQyu.webp",
+      "_astro/ReportFirststep.77_B2lI7_2if27W.webp",
+      "_astro/ReportReport.Bxg5ESoZ_kLKaX.webp",
+      "_astro/ReportSelectmeeting.C9Gfs1aK_Kca5G.webp",
+      "_astro/ReportShowlist.jVbKWg6B_1mIoxH.webp",
+      "_astro/ResendMailChooseMeeting.SqE4M2MJ_Z20puWX.webp",
+      "_astro/ResendMailRegisterTab.DMkXMfKc_1l6jdS.webp",
+      "_astro/ResendMailResend.dNr9Yxgw_1MLGJr.webp",
+      "_astro/ResendMailShowList.D_q_8lag_1PXPkB.webp",
+      "_astro/ViewChooseMeeting.C9FJ67U2_2YXWj.webp",
+      "_astro/ViewManage.CJHvFEZs_zekTS.webp",
+      "_astro/ViewRegisterTab.CCK7ctrb_Z1KHXkC.webp",
+      "_astro/ViewReportDownload.LW2Ru1h1_24AtU3.webp",
+      "_astro/ViewReportMeeting.cXR6MvjG_1cR8vD.webp",
+      "_astro/ViewReportQueue.DUQ4krYY_Z1PiCAu.webp",
+      "_astro/ViewReportStatus.Clhp7jZn_Z1Bp15P.webp",
+      "_astro/ViewReportWho.KO5udZ7D_Z1UY2QG.webp",
+      "_astro/ZoomMeetingPage.CTb7lYTI_Z1ArdhQ.webp",
+      "_astro/logon-31.E21s_WtH_Bbczb.webp",
+      "_astro/logon-en3.Dy8f7a7q_1rTP5h.webp",
+      "_astro/select-univ-3en.B8mWQFpy_Z1oj9oo.webp",
+      "_astro/select_affiliation-3.DILdkeQx_Zh8USt.webp",
+      "_astro/task_with_ai_use_policy.M97TwTV1_2fQBgO.webp"
+    ],
+    "removed": [
+      "_astro/02-settings-02.BaFbNkI3_1OPFyb.webp",
+      "_astro/04-settings-confirm.6QBaLHKf_soEE5.webp",
+      "_astro/ChangeToRegister.u6nRH3dt_2eYVkE.webp",
+      "_astro/DeadlineCheckOn.Y4Ca9i8m_9OTO.webp",
+      "_astro/DeadlineChooseMeeting.BU4rssrW_1p93sL.webp",
+      "_astro/DeadlineEditOption.CjqtEC74_1weGsK.webp",
+      "_astro/DeadlineRegisterTab.BYqb7dTF_3yYDM.webp",
+      "_astro/DesignBrandingTab.Ba0hNWyL_1DONyV.webp",
+      "_astro/DesignChooseMeeting.oROZb3wh_1sUgFH.webp",
+      "_astro/Filesender1.C7AyrZl0_1SQJol.webp",
+      "_astro/Filesender2.ewWmBhhw_Nr4gd.webp",
+      "_astro/FormChooseMeeting.pmYKLfr0_Z2uM9UX.webp",
+      "_astro/FormEditOption.Om4wJt9R_1n7rT5.webp",
+      "_astro/FormQuestionnaireAddOriginal.CzQdViTO_ZYeTmH.webp",
+      "_astro/FormQuestionnaireOriginalQuestionSave.jz7nJzi__Z1pCkgL.webp",
+      "_astro/FormQuestionnaireOriginalQuestion_new.Gzl0_GWq_Z2fL6rE.webp",
+      "_astro/FormQuestionnaireTab.BaCpeQAt_1guxRx.webp",
+      "_astro/FormRegisterTab.B61ZHTRz_10QeTc.webp",
+      "_astro/ManualAccepted.Bc0JYEEk_1I2Pxk.webp",
+      "_astro/ManualApplied.DciIJZVM_26t63Q.webp",
+      "_astro/ManualChooseMeeting.DOwuUhn1_Tovo0.webp",
+      "_astro/ManualEditOption.Bl8kLlrp_Z12H77f.webp",
+      "_astro/ManualManage.BiKD1jWt_2gk4t7.webp",
+      "_astro/ManualRegisterTab.CxewkdBv_2lUX5A.webp",
+      "_astro/ManualRejected.ByP_HUyr_7bnfJ.webp",
+      "_astro/ManualRejectedList.DLNpji6A_CO4l.webp",
+      "_astro/ManualRejectedMessage.gjVII3hr_Z15TOqD.webp",
+      "_astro/MustRegisterCheckOn.Du3lGzdh_tJkBG.webp",
+      "_astro/OnlyVerifiedUserCheckOn.BAHUbSOM_Z1hoU4a.webp",
+      "_astro/OnlyVerifiedUserDomain.CkMUnjKR_ZzVOy9.webp",
+      "_astro/RegisterLink.B6oWuF8u_1kpExv.webp",
+      "_astro/RegistrationForm_new.C4SDzZIW_2rYOS8.webp",
+      "_astro/RegularChangeToRegister.BIm2XoW__Z14rccq.webp",
+      "_astro/RegularChooseMeeting.B8368NTM_28SoLK.webp",
+      "_astro/RegularEditButton.CZEZ0flt_p50fS.webp",
+      "_astro/ReportExport.BYoL9jl7_hJDu2.webp",
+      "_astro/ReportFirststep.CG0DdQ_E_ZnPoya.webp",
+      "_astro/ReportReport.DQfV5CVA_Z19zdml.webp",
+      "_astro/ReportSelectmeeting.CqdN5sgW_zXPBE.webp",
+      "_astro/ReportShowlist.BVblZkCo_18hLNf.webp",
+      "_astro/ResendMailChooseMeeting.iY2qp7OG_Z2rkoL1.webp",
+      "_astro/ResendMailRegisterTab.CobR0l7B_Z5e66P.webp",
+      "_astro/ResendMailResend.BdCa-nLw_1zFThx.webp",
+      "_astro/ResendMailShowList.30ATjz9i_ZCC4EC.webp",
+      "_astro/ViewChooseMeeting.ADz5Axjp_2kWBOY.webp",
+      "_astro/ViewManage.CKY5trqh_l6oLO.webp",
+      "_astro/ViewRegisterTab.BuoLAyyf_Z15N9oz.webp",
+      "_astro/ViewReportDownload.Tg3FaI5L_bSnLQ.webp",
+      "_astro/ViewReportMeeting.TsihLHws_Z1rQrv1.webp",
+      "_astro/ViewReportMenu.CW_msbIA_rwykX.webp",
+      "_astro/ViewReportSelect.DrSXKQaB_Z2eyVze.webp",
+      "_astro/ViewReportStatus.DTcAED0O_Z23mjJB.webp",
+      "_astro/ViewReportWho.BaSfxO8D_1VvqX9.webp",
+      "_astro/logon.BuIO6TId_Z2vfU4Y.webp",
+      "_astro/select_affiliation.0Fk-qh_m_ZzdAwz.webp"
+    ]
+  },
+  "files": [],
+  "redirects": []
+}
