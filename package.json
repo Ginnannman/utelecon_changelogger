@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "diff": "9.0.0",
-    "hast-util-from-html": "2.0.3",
+    "hast-util-from-html": "2.1.0",
     "hast-util-select": "6.0.4"
   }
 }
